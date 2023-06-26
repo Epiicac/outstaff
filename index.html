@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="fonts/TTNormsPro/stylesheet.css">
+    <link rel="stylesheet" href="fonts/RobotoFlex/stylesheet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js" integrity="sha512-3Ei7OPFo83kw3cPbDLeLhn/YF8tZB7Vs8sfli0B/KEekureL5eosDeshYFICCvt4K8i0yUil/lK3cSiic2Wjkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="wrapper">
+      <div class="main-nav">
+        <div class="left">
+          <nav>
+            <div class="logo">
+              <a href="#">
+                <img src="images/logo.svg" alt="smg">
+              </a>
+            </div>
+            <ul class="menu-items">
+              <li>
+                <a class="menu-item" href="#about">О лендинге</a>
+              </li>
+              <li>
+                <a class="menu-item" href="#rate">Тарифы</a>
+              </li>
+              <li>
+                <a class="menu-item" href="#process">Процесс</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="right">
+          <a href="https://wa.me/79015171505" class="header-element">
+            <img src="images/wa.svg" alt="WhatsApp">
+          </a>
+          <a href="https://t.me/softmgbot" class="header-element">
+            <img src="images/tg.svg" alt="WhatsApp">
+          </a>
+          <a href="mailto:landing@softmg.ru" class="header-element">landing@softmg.ru</a>
+          <img src="images/divider.svg" class="header-element">
+          <a href="tel:+7 (495) 532-72-71" class="header-element">+7 (495) 532-72-71</a>
+          <a href="#form" class="header-button button header-element">Оставить заявку</a>
+        </div>
+      </div>
+      <section>
+        <div class="banner">
+          <div class="banner-tags">
+            <div class="banner-tag-element">Минимум вашего времени</div>
+            <div class="banner-tag-element">Продуманная "продающая структура"</div>
+            <div class="banner-tag-element">Эффектный визуал и подача</div>
+            <div class="banner-tag-element">Бизнес подход</div>
+            <div class="banner-tag-element">Глубокий анализ</div>
+            <div class="banner-tag-element">Качественный трафик</div>
+          </div>
+          <h1 class="banner-title">заказать<br>продающий лендинг</h1>
+          <span class="banner-description">Стоимость лендинга</span>
+          <span class="accent1">от 129 990 ₽</span>
+          <a href="#form" class="banner-button button">Заказать сайт</a>
+        </div>
+      </section>
+      <section>
+        <div class="slider-banner">
+          <div class="left">
+            <h2>Лендинг поможет:</h2>
+            <div class="banner-pagination">
+
+            </div>
+            <swiper-container class="slider-banner-content" init="false">
+              <swiper-slide class="slider-banner-item">
+                <h3 class="slider-banner-title">Собрать контакты своих потенциальных клиентов</h3>
+                <span class="slider-banner-description">Если у вас нет сайта - лендинг отличная возможность выйти на рынок и найти первых клиентов</span>
+              </swiper-slide>
+              <swiper-slide class="slider-banner-item">
+                <h3 class="slider-banner-title">Lorem ipsum dolor sit amet consectetur</h3>
+                <span class="slider-banner-description">adipisicing elit. Ducimus exercitationem esse iusto saepe harum, fuga qui officiis tempore.</span>
+              </swiper-slide>
+              <swiper-slide class="slider-banner-item">
+                <h3 class="slider-banner-title">adipisicing elit. Ducimus exercitationem esse</h3>
+                <span class="slider-banner-description">Lorem ipsum dolor sit amet consectetur fuga qui officiis tempore.</span>
+              </swiper-slide>
+            </swiper-container>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+            <script>
+              swiperEl = document.querySelector('.slider-banner-content')
+
+              const params = {
+                pagination: {
+                  el: '.banner-pagination',
+                  clickable: true,
+                  renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                  }
+                },
+                effect: 'fade',
+                fadeEffect: {
+                  crossFade: true
+                }
+              }
+
+              Object.assign(swiperEl, params)
+
+              swiperEl.initialize()
+            </script>
+          </div>
+          <div class="right">
+            <img src="images/slider-banner.png" alt="Phones" class="slider-banner-image" draggable="false">
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

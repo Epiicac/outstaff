@@ -1,0 +1,77 @@
+:root {
+  --bg-color: #000000;
+  --main-color: #6228FF;
+  --hover-color: #FFFFFF1A;
+  --border-color: #FFFFFF4D;
+  --text-accent-color: #FFFFFF;
+  --text-main-color: #9395A0;
+  --card-bg-color: #1A1A1A;
+
+  --animation-timing: .4s;
+}
+
+@media screen and (min-width: 420px) {
+  :root {
+    --big-radius: 36px;
+    --medium-radius: 36px;
+    --small-radius: 24px;
+    
+    --normal-size: 16px;
+    --h1-size: 42px;
+    --h2-size: 40px;
+    --h3-size: 24px;
+    --accent1-size: 36px;
+    --accent2-size: 24px;
+    --accent3-size: 18px;
+    --small-size: 16px;
+    --menu-item-size: 32px;
+
+    --block-padding: 120px;
+    --title-margin: 0 0 60px 0;
+    --wrapper-padding: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --big-radius: 36px;
+    --medium-radius: 36px;
+    --small-radius: 24px;
+    
+    --normal-size: 16px;
+    --h1-size: 72px;
+    --h2-size: 40px;
+    --h3-size: 24px;
+    --accent1-size: 36px;
+    --accent2-size: 24px;
+    --accent3-size: 18px;
+    --small-size: 16px;
+    --menu-item-size: 32px;
+
+    --block-padding: 120px;
+    --title-margin: 0 0 60px 0;
+    --wrapper-padding: 36px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  :root {
+    --big-radius: 64px;
+    --medium-radius: 48px;
+    --small-radius: 24px;
+    
+    --normal-size: 18px;
+    --h1-size: 90px;
+    --h2-size: 48px;
+    --h3-size: 36px;
+    --accent1-size: 48px;
+    --accent2-size: 36px;
+    --accent3-size: 24px;
+    --small-size: 16px;
+    --menu-item-size: 18px;
+
+    --block-padding: 160px;
+    --title-margin: 0 0 100px 0;
+    --wrapper-padding: 72px;
+  }
+}

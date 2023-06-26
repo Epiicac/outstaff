@@ -1,0 +1,56 @@
+@media screen and (min-width: 420px) {
+  .main-nav {
+    height: 72px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav {
+    height: 116px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .main-nav {
+    height: 116px;
+  }
+
+  .menu-items {
+    gap: 24px;
+    margin-left: 54px;
+  }
+
+  .slider-banner-description {
+    max-width: 65%;
+  }
+  .slider-banner-title {
+    margin-bottom: 24px;
+  }
+  .banner-pagination .swiper-pagination-bullet {
+    width: 67px;
+    height: 67px;
+    border-radius: 67px;
+  }
+  .banner-pagination {
+    gap: 8px;
+    margin: 64px 0 48px 0;
+  }
+  .slider-banner .left {
+    width: calc(50% - 128px);
+    padding: 100px 64px;
+  }
+  .banner {
+    width: calc(100% - 128px);
+  }
+  .banner-button {
+    padding: 20px 50px;
+  }
+  
+  .main-nav .right {
+    gap: 24px;
+  }
+
+  .wrapper {
+    margin-top: 116px
+  }
+}

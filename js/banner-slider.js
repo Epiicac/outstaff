@@ -1,0 +1,1 @@
+var bannerSlider = new Swiper('.slider-banner-content', {});
