@@ -7,61 +7,56 @@ body {
   background-color: var(--bg-color);
   font-family: "Roboto Flex";
 }
-
 h1, h2, h3, .menu-item {
   color: var(--text-accent-color);
 }
-
 h1, h2 {
   font-family: "Roboto Flex", serif;
   font-weight: 447;
   line-height: 84%;
   letter-spacing: 0.9px;
   margin: 0;
+  font-variation-settings: "opsz" 72, "GRAD" 150, "slnt" 0, "XTRA" 556, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 528, "YTAS" 750, "YTDE" -203, "YTFI" 738;
 }
-
 h3 {
   font-family: "TT Norms Pro";
   margin: 0;
 }
-
 h1 { font-size: var(--h1-size) }
 h2 { font-size: var(--h2-size) }
 h3 { font-size: var(--h3-size) }
-
 a {
   text-decoration: none;
   color: var(--text-accent-color);
   font-family: "TT Norms Pro";
   font-weight: 500;
 }
-
 section {
   padding-bottom: var(--block-padding);
 }
-
 span, p, input, input::placeholder {
+  color: var(--text-main-color);
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   color: var(--text-main-color);
 }
 
 .wrapper {
   padding: 0 var(--wrapper-padding);
-  max-width: 1776px;
   margin: 0 auto;
 }
 
 .menu-items {
   display: flex;
-  list-style: none;
-  padding: 0;
   font-weight: 500;
 }
-
 .menu-item {
   color: var(--text-accent-color);
   font-size: var(--menu-item-size);
 }
-
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -69,11 +64,9 @@ span, p, input, input::placeholder {
   position: fixed;
   background-color: #000;
   width: calc(100% - 2 * var(--wrapper-padding));
-  max-width: 1776px;
   top: 0;
   z-index: 4;
 }
-
 .main-nav .left nav, .main-nav .right {
   display: flex;
   align-items: center;
@@ -82,24 +75,20 @@ span, p, input, input::placeholder {
 .button {
   background-color: var(--main-color);
 }
-
 .header-button {
   padding: 11px 24px;
   border-radius: 13px;
 }
-
 .header-button::before {
   content: url("../images/circle.svg");
   position: relative;
   top: -2px;
   margin-right: 10px;
 }
-
 .banner-button {
   border-radius: var(--small-radius);
   display: ruby-base;
 }
-
 .banner {
   background-image: url("../images/banner.png");
   background-color: var(--card-bg-color);
@@ -113,7 +102,6 @@ span, p, input, input::placeholder {
   flex-direction: column;
   align-items: center;
 }
-
 .banner-tags {
   display: flex;
   flex-wrap: wrap;
@@ -141,14 +129,23 @@ span, p, input, input::placeholder {
   font-family: "TT Norms Pro"
 }
 
-.accent1 {
+.accent1, .accent2, .accent3 {
   color: var(--text-accent-color);
-  font-size: var(--accent1-size);
-  margin: 16px 0 36px 0;
   font-family: "TT Norms Pro";
   font-weight: 500;
 }
+.accent1 { font-size: var(--accent1-size); }
+.accent2 { font-size: var(--accent2-size); }
+.accent3 { font-size: var(--accent3-size); }
 
+.small {
+  font-size: var(--small-size);
+  color: var(--text-main-color)
+}
+
+.slider-banner h2 {
+  font-family: "TT Norms Pro"
+}
 .slider-banner {
   display: flex;
   justify-content: space-between;
@@ -198,4 +195,57 @@ span, p, input, input::placeholder {
 .slider-banner-description {
   display: inline-block;
   line-height: 25px;
+}
+
+.rate-cards {
+  display: flex;
+}
+.rate-card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--medium-radius);
+  display: flex;
+  flex-direction: column;
+}
+.rate-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.rate-benefits li {
+  display: flex;
+  align-items: center;
+}
+.rate-benefits li::before {
+  height: 25px;
+  content: url("../images/benefits.svg");
+  margin-right: 10px;
+}
+
+.marquee {
+  /* animation: marquee linear infinite 9.8s; */
+  position: relative;
+  font-family: "Roboto Flex";
+  font-variation-settings: "opsz" 72, "GRAD" 150, "slnt" 0, "XTRA" 556, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 528, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  width: 200%;
+  display: flex;
+  justify-content: space-between;
+}
+.marquee span {
+  color: var(--text-accent-color);
+}
+.marquee-wrapper {
+  position: relative;
+  margin-left: calc(0px - var(--wrapper-padding));
+  margin-right: calc(0px - var(--wrapper-padding));
+  background-color: var(--main-color);
+  padding: 0;
+  margin-bottom: var(--block-padding);
+}
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%
+  }
 }

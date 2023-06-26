@@ -51,6 +51,39 @@
   }
 
   .wrapper {
-    margin-top: 116px
+    margin-top: 116px;
+  }
+
+  .section-title {
+    margin: var(--title-margin);
+  }
+
+  .accent1 {
+    margin: 16px 0 36px 0;
+  }
+
+  .rate-cards {
+    gap: 64px;
+  }
+  .rate-card {
+    width: calc(33.333% - 128px / 3);
+    padding: 36px
+  }
+  .rate-title {
+    margin-bottom: 6px;
+  }
+  .rate-price {
+    margin-bottom: 24px;
+  }
+  .rate-button {
+    margin: 36px 0;
+    text-align: center;
+    padding: 11px;
+    border-radius: 13px;;
+  }
+
+  .marquee {
+    padding: 35px 0;
+    font-size: 32px;
   }
 }
