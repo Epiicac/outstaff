@@ -1,19 +1,24 @@
-<svg width="348" height="144" viewBox="0 0 348 144" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 29C11 16.8497 20.8497 7 33 7H315C327.15 7 337 16.8497 337 29V122C337 134.15 327.15 144 315 144H33C20.8497 144 11 134.15 11 122V29Z" fill="#323232"/>
-<g filter="url(#filter0_d_229_2046)">
-<path d="M23 35C23 26.1634 30.1634 19 39 19H309C317.837 19 325 26.1634 325 35V60C325 68.8366 317.837 76 309 76H39C30.1634 76 23 68.8366 23 60V35Z" fill="#6228FF"/>
+<svg width="326" height="137" viewBox="0 0 326 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_325)">
+<path d="M0 22C0 9.84973 9.84974 0 22 0H304C316.15 0 326 9.84974 326 22V115C326 127.15 316.15 137 304 137H22C9.84974 137 0 127.15 0 115V22Z" fill="#323232"/>
+<g filter="url(#filter0_d_6_325)">
+<path d="M12 28C12 19.1634 19.1634 12 28 12H298C306.837 12 314 19.1634 314 28V53C314 61.8366 306.837 69 298 69H28C19.1634 69 12 61.8366 12 53V28Z" fill="#6228FF"/>
 </g>
-<path d="M59.75 42H58.375V39.25C58.375 35.455 55.295 32.375 51.5 32.375C47.705 32.375 44.625 35.455 44.625 39.25V42H43.25C41.7375 42 40.5 43.2375 40.5 44.75V58.5C40.5 60.0125 41.7375 61.25 43.25 61.25H59.75C61.2625 61.25 62.5 60.0125 62.5 58.5V44.75C62.5 43.2375 61.2625 42 59.75 42ZM51.5 54.375C49.9875 54.375 48.75 53.1375 48.75 51.625C48.75 50.1125 49.9875 48.875 51.5 48.875C53.0125 48.875 54.25 50.1125 54.25 51.625C54.25 53.1375 53.0125 54.375 51.5 54.375ZM55.7625 42H47.2375V39.25C47.2375 36.8987 49.1487 34.9875 51.5 34.9875C53.8512 34.9875 55.7625 36.8987 55.7625 39.25V42Z" fill="white"/>
+<path d="M48.75 35H47.375V32.25C47.375 28.455 44.295 25.375 40.5 25.375C36.705 25.375 33.625 28.455 33.625 32.25V35H32.25C30.7375 35 29.5 36.2375 29.5 37.75V51.5C29.5 53.0125 30.7375 54.25 32.25 54.25H48.75C50.2625 54.25 51.5 53.0125 51.5 51.5V37.75C51.5 36.2375 50.2625 35 48.75 35ZM40.5 47.375C38.9875 47.375 37.75 46.1375 37.75 44.625C37.75 43.1125 38.9875 41.875 40.5 41.875C42.0125 41.875 43.25 43.1125 43.25 44.625C43.25 46.1375 42.0125 47.375 40.5 47.375ZM44.7625 35H36.2375V32.25C36.2375 29.8987 38.1487 27.9875 40.5 27.9875C42.8512 27.9875 44.7625 29.8987 44.7625 32.25V35Z" fill="white"/>
+</g>
 <defs>
-<filter id="filter0_d_229_2046" x="0" y="0" width="348" height="103" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_6_325" x="-11" y="-7" width="348" height="103" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
 <feGaussianBlur stdDeviation="11.5"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.4 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_229_2046"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_229_2046" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_6_325"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_6_325" result="shape"/>
 </filter>
+<clipPath id="clip0_6_325">
+<rect width="326" height="137" fill="white"/>
+</clipPath>
 </defs>
 </svg>

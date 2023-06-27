@@ -7,7 +7,7 @@ body {
   background-color: var(--bg-color);
   font-family: "Roboto Flex";
 }
-h1, h2, h3, .menu-item {
+h1, h2, h3, h4, h5, h6 .menu-item {
   color: var(--text-accent-color);
 }
 h1, h2 {
@@ -19,7 +19,7 @@ h1, h2 {
   font-variation-settings: "opsz" 72, "GRAD" 150, "slnt" 0, "XTRA" 556, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 528, "YTAS" 750, "YTDE" -203, "YTFI" 738;
 }
 h3 {
-  font-family: "TT Norms Pro";
+  font-family: "TT Norms Pro"; 
   margin: 0;
 }
 h1 { font-size: var(--h1-size) }
@@ -266,8 +266,12 @@ ul {
 }
 .grid-card-content {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.grid-card-content * {
+  width: 100%;
 }
 .grid-card-image {
   position: relative;
@@ -284,5 +288,14 @@ ul {
 }
 .grid-card-content img {
   max-width: 100%;
+  width: 100%;
   overflow: auto;
+}
+
+.contractor-form {
+  background-image: url('../images/contractor.png');
+  background-color: var(--card-bg-color);
+  background-position: center right;
+  background-size: cover;
+  border-radius: var(--medium-radius);
 }

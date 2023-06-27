@@ -108,15 +108,29 @@
   .col2 .grid-card-content {
     max-width: calc(50%);
   }
+  .grid-card-content * {
+    align-self: baseline;
+  }
+  .grid-card-content span {
+    align-self: flex-end;
+  }
 
   #procent {
     margin: 71px -48px 10px -48px;
     max-width: calc(100% + 96px);
+    width: calc(100% + 96px);
   }
   #arrow {
     margin: 36px 0;
   }
   #list {
     margin: 36px 0 60px 0;
+  }
+  #lock {
+    margin: 36px 0;
+  }
+
+  .contractor-form {
+    padding: 64px;
   }
 }
