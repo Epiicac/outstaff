@@ -133,4 +133,13 @@
   .contractor-form {
     padding: 64px;
   }
+  .contractor-subtitle {
+    margin-top: 12px;
+  }
+
+  .process-card {
+    width: 299px;
+    height: 317px;
+    padding: 64px 36px;
+  }
 }

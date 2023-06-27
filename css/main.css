@@ -9,6 +9,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6 .menu-item {
   color: var(--text-accent-color);
+  margin: 0;
 }
 h1, h2 {
   font-family: "Roboto Flex", serif;
@@ -21,6 +22,7 @@ h1, h2 {
 h3 {
   font-family: "TT Norms Pro"; 
   margin: 0;
+  font-weight: 500;
 }
 h1 { font-size: var(--h1-size) }
 h2 { font-size: var(--h2-size) }
@@ -295,7 +297,89 @@ ul {
 .contractor-form {
   background-image: url('../images/contractor.png');
   background-color: var(--card-bg-color);
-  background-position: center right;
+  background-position: top right;
   background-size: cover;
   border-radius: var(--medium-radius);
+}
+.contractor-subtitle {
+  font-size: var(--normal-size);
+  font-weight: 500;
+  font-family: "TT Norms Pro";
+}
+.contractor-input {
+  width: 50%;
+  background-color: #323232;
+  padding: 12px;
+  border-radius: var(--small-radius);
+  display: flex;
+  margin: 36px 0;
+}
+.contractor-input input {
+  flex: 1 0 0;
+  font-size: var(--normal-size);
+  background: transparent;
+  border: none;
+  color: var(--text-main-color);
+  font-family: "TT Norms Pro";
+  font-weight: 500;
+}
+.contractor-input input:focus {
+  outline: none;
+}
+.contractor-input button {
+  padding: 11px 40px;
+  font-family: "TT Norms Pro";
+  font-size: var(--small-size);
+  background-color: #FFFFFF;
+  border-radius: 13px;
+  border: none;
+  cursor: pointer;
+}
+.contractor-input button:hover {
+  background-color: #AAAAAA;
+}
+.contractor-description {
+  font-weight: 500;
+  font-family: "TT Norms Pro";
+  line-height: 140%;
+}
+.process-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.process-navigation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#prevProcess,
+#nextProcess {
+  cursor: pointer;
+}
+.process-controls {
+  max-width: 100% !important;
+}
+.process-card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--medium-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: .2s;
+}
+.swiper-slide-active .process-card {
+  background-color: var(--main-color);
+}
+.swiper-slide-active .process-card span {
+  color: var(--text-accent-color)
+}
+.process-card h3 {
+  font-size: var(--accent3-size);
+  margin-bottom: 36px;
+}
+.process-card span {
+  font-family: "TT Norms Pro";
+  font-size: var(--normal-size);
+  line-height: 140%;
 }
