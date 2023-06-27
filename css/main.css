@@ -282,3 +282,6 @@ ul {
   font-weight: 500;
   line-height: 140%;
 }
+.grid-card-content img {
+  max-width: 100%;
+}
