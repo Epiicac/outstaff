@@ -293,15 +293,19 @@
                 </div>
               </div>
             </swiper-slide>
+            <swiper-slide></swiper-slide>
+            <swiper-slide></swiper-slide>
           </swiper-container>
           <script>
             processEl = document.querySelector('.process-slider')
 
             const paramsProcess = {
+              shouldPreventDefault: true,
               navigation: {
                 prevEl: '#prevProcess',
                 nextEl: '#nextProcess'
               },
+              slideToClickedSlide: true,
               slidesPerView: 3.3,
               breakpoints: {
                 1280: {
@@ -311,7 +315,7 @@
             }
 
             Object.assign(processEl, paramsProcess)
-
+            
             processEl.initialize()
           </script>
         </div>
