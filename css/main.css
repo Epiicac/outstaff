@@ -223,13 +223,17 @@ ul {
 }
 
 .marquee {
-  animation: marquee linear infinite 10s;
   position: relative;
   font-family: "Roboto Flex";
   font-variation-settings: "opsz" 72, "GRAD" 150, "slnt" 0, "XTRA" 556, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 528, "YTAS" 750, "YTDE" -203, "YTFI" 738;
   width: 200%;
   display: flex;
+}
+.marquee div {
+  display: flex;
+  align-items: center;
   justify-content: space-around;
+  width: 50%;
 }
 .marquee span {
   color: var(--text-accent-color);
@@ -250,4 +254,31 @@ ul {
   100% {
     left: -100%
   }
+}
+
+.grid-cards {
+  display: grid;
+}
+.grid-card {
+  background-color: var(--card-bg-color);
+  display: flex;
+  justify-content: space-between;
+}
+.grid-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.grid-card-image {
+  position: relative;
+}
+.grid-card-image img {
+  position: absolute;
+  right: 0;
+}
+.grid-card-content span {
+  font-size: var(--normal-size);
+  font-family: "TT Norms Pro";
+  font-weight: 500;
+  line-height: 140%;
 }
