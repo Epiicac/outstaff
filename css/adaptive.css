@@ -118,8 +118,7 @@
   #procent {
     margin: 71px -48px 10px -48px;
     max-width: calc(100% + 96px);
-    min-width: calc(100% + 96px);
-    display: inline-block;
+    width: calc(100% + 96px);
   }
   #arrow {
     margin: 36px 0;
