@@ -142,4 +142,11 @@
     height: 317px;
     padding: 64px 36px;
   }
+
+  .partners-wrapper img {
+    min-width: calc(20% - 36px);
+  }
+  .partners-wrapper {
+    margin-top: 36px;
+  }
 }
