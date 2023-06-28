@@ -56,7 +56,7 @@
       </div>
     </div>
     <div class="wrapper">
-      <section>
+      <section id="first-slide">
         <div class="banner">
           <div class="banner-tags">
             <div class="banner-tag-element">Минимум вашего времени</div>
@@ -72,6 +72,7 @@
           <a href="#form" class="banner-button button">Заказать сайт</a>
         </div>
       </section>
+      <div id="about"></div>
       <section>
         <div class="slider-banner">
           <div class="left">
@@ -107,7 +108,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section id="rate">
         <h2 class="section-title">тарифы</h2>
         <div class="rate-cards">
           <div class="rate-card">
@@ -216,7 +217,7 @@
           <span class="contractor-description">Нажимая на кнопку «Оформить»,<br>вы соглашаетесь с политикой обработки персональных данных.</span>
         </div>
       </section>
-      <section>
+      <section id="process">
         <div class="process">
           <div class="process-controls section-title">
             <h2>Процесс работы</h2>
@@ -283,10 +284,167 @@
       <section>
         <h2 class="section-title">что говорят<br>наши клиенты</h2>
         <div class="clients-wrapper">
-          
+          <div class="client-card">
+            <div class="client-meta">
+              <img draggable="false" src="images/eurovpn-avatar.svg" alt="" class="client-avatar">
+              <div class="client-text">
+                <span class="client-name">EuroVpn</span><br>
+                <a href="https://eurovpn.org" target="_blank" class="client-link small">eurovpn.org</a>
+              </div>
+            </div>
+            <p class="client-review">Приятно удивили. Долгое время ожидал какого-то подвоха, халтурной работы. Но дизайн был выполнен на высоком уровне. Все быстро и грамотно. Все замечания учтены. Очень рекомендую!</p>
+            <span class="client-real-name small">Андрей Балытский</span>
+          </div>
+          <div class="client-card">
+            <div class="client-meta">
+              <img draggable="false" src="images/cosmos_avatar.svg" alt="" class="client-avatar">
+              <div class="client-text">
+                <span class="client-name">Космос Медиа</span><br>
+                <a href="https://cosmosmedia.pro/" target="_blank" class="client-link small">cosmosmedia.pro</a>
+              </div>
+            </div>
+            <p class="client-review">Взаимодействуем с компанией давно, совместно выполнили несколько проектов, ответственный подход к выполнению работы, оперативная помощь. Совместной работой крайне довольны, всегда рекомендуем всем, кто интересуется.</p>
+            <span class="client-real-name small">Екатерина Алексеева</span>
+          </div>
         </div>
       </section>
+      <section>
+        <h2 class="section-title">частые вопросы</h2>
+        <div class="questions-wrapper">
+          <div class="left">
+            <div class="not-found">
+              <h4 class="not-found-title">Не нашли то, что искали?</h4>
+              <span class="small not-found-desc">Отправьте свой вопрос на нашу почту</span>
+              <a href="#form" class="banner-button button">Задать вопрос</a>
+            </div>
+          </div>
+          <div class="right">
+            <div class="accordeon">
+              <div onclick="toggleAccordeon(this)" class="accordeon-body">
+                <span class="accordeon-question">Я не понимаю, какой тариф мне подходит, как быть?<img src="images/accordeon_arrow.svg" alt="^"></span>
+                <div class="accordeon-subject">
+                  <div class="small accordeon-subject-text">
+                    Вы можете связаться с нами оставив заявку или позвонив по номеру. Наш менеджер свяжется с вами и поможет подобрать вам тариф в индивидуальном порядке, при этом учитывая потребности вашего бизнеса.
+                  </div>  
+                  <div class="whitespace"></div>
+                </div>
+              </div>
+              <div onclick="toggleAccordeon(this)" class="accordeon-body">
+                <span class="accordeon-question">Смогу ли я дальше сам управлять лендингом?<img src="images/accordeon_arrow.svg" alt="^"></span>
+                <div class="accordeon-subject">
+                  <div class="small accordeon-subject-text">
+                    Да мы предоставляем все необходимые данные для самостоятельной работы с системой управления лендингом (CMS). Показываем, как можно самостоятельно редактировать блоки своими силами.</div>  
+                  <div class="whitespace"></div>
+                </div>
+              </div>
+              <div onclick="toggleAccordeon(this)" class="accordeon-body">
+                <span class="accordeon-question">Пишите ли вы сами тексты для лендингов?<img src="images/accordeon_arrow.svg" alt="^"></span>
+                <div class="accordeon-subject">
+                  <div class="small accordeon-subject-text">
+                    Да, в тарифе “Профессиональный” мы тщательно прорабатываем контент, делаем его конверсионным, что способствует увеличению конверсий и продаж.</div>  
+                  <div class="whitespace"></div>
+                </div>
+              </div>
+              <div onclick="toggleAccordeon(this)" class="accordeon-body">
+                <span class="accordeon-question">Как я буду получать заказы или онлайн оплаты?<img src="images/accordeon_arrow.svg" alt="^"></span>
+                <div class="accordeon-subject">
+                  <div class="small accordeon-subject-text">
+                    На странице размещаются контактные данные (телефон и E-Mail). Также на лендингах размещаются одна или несколько форм обратной связи, которые подталкивают посетителей оставить заявку. Дополнительно можно разместить на вашем лендинге квизы, всплывающие окна, калькуляторы и т.д., которые дополнительно способствуют увеличению заказов.</div>  
+                  <div class="whitespace"></div>
+                </div>
+              </div>
+              <div onclick="toggleAccordeon(this)" class="accordeon-body">
+                <span class="accordeon-question">Почему у вас так дорого? На фрилансе делают дешевле.<img src="images/accordeon_arrow.svg" alt="^"></span>
+                <div class="accordeon-subject">
+                  <div class="small accordeon-subject-text">
+                    Да, программист на фрилансе сделает дешевле. Как правило, в его стоимость не входят услуги дизайнера, копирайтера, маркетолога. А это дополнительные расходы денег, вашего времени. Заказывая у нас, вы гарантированно сотрудничаете с командой профессионалов, которая выполнит разработку сайта на Битрикс «под ключ», и вам не придется нигде ничего доделывать.
+                  </div>  
+                  <div class="whitespace"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="form">
+        <h2>оформить заявку</h2>
+        <form action="#" class="leave-request">
+          <div class="toppings">
+            <input class="topi" type="checkbox" name="logo" id="t1">
+            <label class="topping" for="t1">Разработка логотипа</label>
+            <input class="topi" type="checkbox" name="logo" id="t2">
+            <label class="topping" for="t2">Калькулятор</label>
+            <input class="topi" type="checkbox" name="logo" id="t3">
+            <label class="topping" for="t3">Квиз</label>
+            <input class="topi" type="checkbox" name="logo" id="t4">
+            <label class="topping" for="t4">Поддержка сайта</label>
+            <input class="topi" type="checkbox" name="logo" id="t5">
+            <label class="topping" for="t5">Запуск рекламы Яндекс.Директ</label>
+            <input class="topi" type="checkbox" name="logo" id="t6">
+            <label class="topping" for="t6">Настройка аналитики</label>
+            <input class="topi" type="checkbox" name="logo" id="t7">
+            <label class="topping" for="t7">Онлайн-чат</label>
+          </div>
+          <div class="main-part">
+            <textarea name="description" id="request-description" rows="3" placeholder="Напишите кратко о проекте"></textarea>
+            <input type="file" name="additional-file" id="file">
+            <label class="add-file" for="file">
+              <div class="file-icon">
+                <img src="images/clip.svg" alt="8">
+              </div>
+              <div class="file-desc">
+                <span class="file-hint">Прикрепить файлы</span>
+                <span class="file-hint-desc">Загружаемые файлы не должны превышать 20 мб</span>
+              </div>
+            </label>
+            <input type="text" name="name" id="" placeholder="Как вас зовут?">
+            <input type="text" name="email-or-phone" id="contacts" placeholder="E-mail или телефон">
+            <input id="send-form" type="submit" value="Обсудить проект">
+          </div>
+        </form>
+      </section>
     </div>
-    <script src="js/banner-slider.js" type="text/javascript"></script>
+    <footer>
+      <div class="first-part">
+        <div class="footer-row">
+          <img src="images/logo.svg" alt="SMG">
+          <div class="credentials">
+            <span class="credentials-number small">ИНН: 7729668550</span>
+            <span class="credentials-number small">КПП: 772501001</span>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-side">
+            <span class="adress-desc">Офис в Москве</span>
+            <span class="adress">Переулок Кожевнический 4-й,<br>дом 2/12, г. Москва, 115114</span>
+          </div>
+          <div class="footer-side">
+            <a class="footer-number" href="tel:+7 (495) 532-72-71">+7 (495) 532-72-71</a>
+            <a class="footer-email" href="mailto:landing@softmg.ru">landing@softmg.ru</a>
+          </div>
+        </div>
+      </div>
+      <div class="afterparty">
+        <div class="afterparty-side">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Документы</a>
+        </div>
+        <div class="afterparty-side">
+          <a href="https://wa.me/79015171505">
+            <img src="images/waw.svg" alt="WhatsApp">
+          </a>
+          <a href="https://vk.com/softmg">
+            <img src="images/vkw.svg" alt="VK">
+          </a>
+          <a href="https://t.me/softmgbot">
+            <img src="images/tgw.svg" alt="Telegram">
+          </a>
+        </div>
+        <div class="afterparty-side">
+          <span class="copywrite">© 2010–2023 Soft Media Group. Все права защищены.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js" type="text/javascript"></script>
   </body>
 </html>

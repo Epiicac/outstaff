@@ -34,7 +34,7 @@ a {
   font-weight: 500;
 }
 section {
-  padding-bottom: var(--block-padding);
+  padding-top: var(--block-padding);
 }
 span, p, input, input::placeholder {
   color: var(--text-main-color);
@@ -44,6 +44,13 @@ ul {
   padding: 0;
   margin: 0;
   color: var(--text-main-color);
+}
+textarea {
+  resize: none;
+}
+input[type="checkbox"],
+input[type="file"] {
+  display: none;
 }
 
 .wrapper {
@@ -143,7 +150,8 @@ ul {
 
 .small {
   font-size: var(--small-size);
-  color: var(--text-main-color)
+  color: var(--text-main-color);
+  line-height: 140%;
 }
 
 .slider-banner h2 {
@@ -246,7 +254,7 @@ ul {
   margin-right: calc(0px - var(--wrapper-padding));
   background-color: var(--main-color);
   padding: 0;
-  margin-bottom: var(--block-padding);
+  margin-top: var(--block-padding);
   overflow: hidden;
 }
 @keyframes marquee {
@@ -391,5 +399,203 @@ ul {
 .partners-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.clients-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+.client-card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--medium-radius);
+}
+.client-meta {
+  display: flex;
+  align-items: center;
+}
+.client-name {
+  font-size: var(--accent3-size);
+  color: var(--text-accent-color);
+}
+.client-review {
+  color: var(--text-accent-color);
+  line-height: 180%;
+  font-size: var(--normal-size);
+  margin: 40px 0 36px 0;
+}
+.client-real-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: -5px;
+}
+.client-real-name::before {
+  content: url('../images/quote.svg');
+  width: 20px;
+  height: 20px;
+}
+
+.accordeon-body {
+  border-radius: var(--medium-radius);
+  cursor: pointer;
+  overflow: hidden;
+  transition: .3s;
+  margin-bottom: 10px;
+}
+.accordeon-body:hover {
+  background-color: var(--card-bg-color) !important;
+}
+.accordeon-question {
+  font-size: var(--normal-size);
+  color: var(--text-accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordeon-question img {
+  width: 18px;
+  height: 12px;
+  transition: .3s;
+}
+.accordeon-subject {
+  max-height: 0;
+}
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  position: sticky;
+}
+.not-found-title {
+  color: var(--text-accent-color);
+  font-size: var(--accent2-size);
+  font-family: "TT Norms Pro";
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.not-found-desc {
+  color: var(--text-accent-color);
+}
+
+.toppings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.topping {
+  color: var(--text-accent-color);
+  font-size: var(--small-size);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px 11px 28px;
+  background-color: var(--card-bg-color);
+  border-radius: 20px;
+  user-select: none;
+  cursor: pointer;
+  transition: .3s;
+}
+.topi:checked + .topping {
+  background-color: var(--main-color);
+}
+.topi:checked + .topping::after {
+  rotate: 45deg;
+  filter: brightness(2);
+}
+.topping::after {
+  content: url('../images/cross.svg');
+  width: 20px;
+  height: 20px;
+  transition: .3s;
+}
+
+.main-part {
+  display: grid;
+  margin-top: 36px;
+}
+.main-part input[type="text"], 
+.main-part textarea,
+.main-part input[type="submit"] {
+  background-color: var(--card-bg-color);
+  border-radius: var(--small-radius);
+  font-family: "TT Norms Pro";
+  border: none;
+  outline: none;
+  color: var(--text-main-color);
+  padding: 20px 28px;
+  font-size: var(--normal-size);
+  font-weight: 500;
+}
+#send-form {
+  background-color: var(--main-color);
+  color: var(--text-accent-color);
+  cursor: pointer;
+}
+
+.add-file {
+  display: flex;
+  gap: 16px;
+}
+.file-icon img {
+  padding: 20px;
+  width: 23px;
+  height: 23px;
+  background-color: var(--card-bg-color);
+  border-radius: 40px;
+}
+.file-icon {
+  cursor: pointer;
+}
+.file-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.file-hint {
+  color: var(--text-accent-color);
+  font-size: var(--accent3-size);
+}
+
+.first-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 var(--wrapper-padding);
+  background-color: var(--card-bg-color);
+}
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.credentials-number {
+  font-family: "TT Norms Pro";
+  font-weight: 500;
+}
+.footer-side {
+  display: flex;
+  flex-direction: column;
+  font-family: "TT Norms Pro";
+}
+.footer-number {
+  font-size: var(--accent2-size);
+}
+.footer-email {
+  text-align: right;
+  font-size: var(--accent2-size);
+  color: var(--text-main-color);
+}
+.adress, .adress-desc {
+  font-size: var(--accent3-size);
+}
+.adress-desc {
+  color: var(--text-accent-color);
+  margin-bottom: 10px;
+}
+.afterparty {
+  padding: 21px var(--wrapper-padding);
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
