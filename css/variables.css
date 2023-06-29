@@ -10,29 +10,29 @@
   --animation-timing: .4s;
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 1280px) {
   :root {
-    --big-radius: 36px;
-    --medium-radius: 36px;
+    --big-radius: 64px;
+    --medium-radius: 48px;
     --small-radius: 24px;
     
-    --normal-size: 16px;
-    --h1-size: 42px;
-    --h2-size: 40px;
-    --h3-size: 24px;
-    --accent1-size: 36px;
-    --accent2-size: 24px;
-    --accent3-size: 18px;
+    --normal-size: 18px;
     --small-size: 16px;
-    --menu-item-size: 32px;
+    --h1-size: 90px;
+    --h2-size: 48px;
+    --h3-size: 36px;
+    --accent1-size: 48px;
+    --accent2-size: 36px;
+    --accent3-size: 24px;
+    --menu-item-size: 18px;
 
-    --block-padding: 120px;
-    --title-margin: 0 0 60px 0;
-    --wrapper-padding: 16px;
+    --block-padding: 160px;
+    --title-margin: 0 0 100px 0;
+    --wrapper-padding: 72px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1280px) {
   :root {
     --big-radius: 36px;
     --medium-radius: 36px;
@@ -54,24 +54,24 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 484px) {
   :root {
-    --big-radius: 64px;
-    --medium-radius: 48px;
+    --big-radius: 36px;
+    --medium-radius: 36px;
     --small-radius: 24px;
     
-    --normal-size: 18px;
+    --normal-size: 16px;
+    --h1-size: 42px;
+    --h2-size: 32px;
+    --h3-size: 24px;
+    --accent1-size: 36px;
+    --accent2-size: 24px;
+    --accent3-size: 18px;
     --small-size: 16px;
-    --h1-size: 90px;
-    --h2-size: 48px;
-    --h3-size: 36px;
-    --accent1-size: 48px;
-    --accent2-size: 36px;
-    --accent3-size: 24px;
-    --menu-item-size: 18px;
+    --menu-item-size: 32px;
 
-    --block-padding: 160px;
-    --title-margin: 0 0 100px 0;
-    --wrapper-padding: 72px;
+    --block-padding: 120px;
+    --title-margin: 0 0 60px 0;
+    --wrapper-padding: 16px;
   }
 }

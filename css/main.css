@@ -65,6 +65,7 @@ input[type="file"] {
 .menu-item {
   color: var(--text-accent-color);
   font-size: var(--menu-item-size);
+  font-family: "TT Norms Pro";
 }
 .main-nav {
   display: flex;
@@ -157,6 +158,15 @@ input[type="file"] {
 .slider-banner h2 {
   font-family: "TT Norms Pro"
 }
+.section-title {
+  margin: var(--title-margin);
+  line-height: 100%;
+}
+.rate-button {
+  text-align: center;
+  padding: 11px;
+  border-radius: 13px;;
+}
 .slider-banner {
   display: flex;
   justify-content: space-between;
@@ -176,6 +186,7 @@ input[type="file"] {
 }
 .banner-pagination {
   display: flex;
+  flex-wrap: wrap;
 }
 .banner-pagination .swiper-pagination-bullet {
   display: flex;
@@ -598,4 +609,8 @@ input[type="file"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.afterparty-side {
+  display: flex;
+  gap: 24px;
 }

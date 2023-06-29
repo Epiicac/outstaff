@@ -65,3 +65,23 @@ document.querySelector('#file').addEventListener('change', () => {
     document.querySelector('.file-icon img').style.backgroundColor = 'var(--main-color)'
   }
 })
+
+document.querySelector('.menu-trigger').addEventListener('click', () => {
+  const wrapper = document.querySelector('.slide-menu-wrapper')
+  wrapper.classList.toggle('active')
+  if (wrapper.classList.contains('active')) {
+    document.querySelector('.menu-trigger img').setAttribute('src', 'images/big_cross.svg')
+  } else {
+    document.querySelector('.menu-trigger img').setAttribute('src', 'images/burger.svg')
+  }
+})
+
+document.querySelector('.slide-menu .menu-items').addEventListener('click', () => {
+  document.querySelector('.slide-menu-wrapper').classList.remove('active')
+  document.querySelector('.menu-trigger img').setAttribute('src', 'images/burger.svg')
+})
+
+document.querySelector('.main-nav.mobile .logo').addEventListener('click', () => {
+  document.querySelector('.slide-menu-wrapper').classList.remove('active')
+  document.querySelector('.menu-trigger img').setAttribute('src', 'images/burger.svg')
+})
