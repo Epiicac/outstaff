@@ -284,6 +284,8 @@ input[type="file"] {
   background-color: var(--card-bg-color);
   display: flex;
   justify-content: space-between;
+  border-radius: var(--medium-radius);
+  overflow: hidden;
 }
 .grid-card-content {
   display: flex;
@@ -384,13 +386,12 @@ input[type="file"] {
   border-radius: var(--medium-radius);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   transition: .2s;
 }
-.swiper-slide-active.process-card {
+.swiper-slide-active .process-card {
   background-color: var(--main-color);
 }
-.swiper-slide-active.process-card span {
+.swiper-slide-active .process-card span {
   color: var(--text-accent-color)
 }
 .process-card h3 {

@@ -27,12 +27,20 @@ const paramsProcess = {
     prevEl: '#prevProcess',
     nextEl: '#nextProcess'
   },
-  centeredSlides: true,
   slideToClickedSlide: true,
-  slidesPerView: 'auto',
   breakpoints: {
+    0: {
+      spaceBetween: 16,
+      slidesPerView: 'auto'
+    },
+    484: {
+      spaceBetween: 24,
+      slidesPerView: 2
+    },
     1280: {
-      spaceBetween: 36
+      centeredSlides: true,
+      spaceBetween: 36,
+      slidesPerView: 'auto'
     }
   }
 }
