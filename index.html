@@ -257,10 +257,10 @@
         <div class="contractor-form">
           <h3 class="contractor-title">Как выбрать подрядчика правильно?</h3>
           <h4 class="contractor-subtitle">Скачивайте наше руководство, чтобы узнать!</h4>
-          <div class="contractor-input">
-            <input type="email" placeholder="Ваша почта">
-            <button>Оформить</button>
-          </div>
+          <form class="contractor-input">
+            <input required id="contractor-email" type="email" placeholder="Ваша почта">
+            <button id="contractor-submit">Оформить</button>
+          </form>
           <span class="contractor-description">Нажимая на кнопку «Оформить»,<br>вы соглашаетесь с политикой обработки персональных данных.</span>
         </div>
       </section>
@@ -501,5 +501,6 @@
       </div>
     </footer>
     <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/formHandler.js" type="text/javascript"></script>
   </body>
 </html>
