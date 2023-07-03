@@ -38,7 +38,6 @@ const paramsProcess = {
       slidesPerView: 2
     },
     1280: {
-      centeredSlides: true,
       spaceBetween: 36,
       slidesPerView: 'auto'
     }

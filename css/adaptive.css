@@ -182,7 +182,10 @@
   }
   .client-card {
     width: 50%;
-    padding: 36px 24px;
+    padding: 36px 24px 60px 24px;
+  }
+  .client-real-name {
+    bottom: 36px;
   }
   .client-meta {
     gap:  20px;
@@ -630,7 +633,8 @@
   }
 
   .process-card {
-    width: 299px;
+    width: 317px;
+    height: 381px;
     padding: 64px 36px;
   }
 
@@ -646,7 +650,10 @@
   }
   .client-card {
     width: 50%;
-    padding: 36px 24px;
+    padding: 36px 24px 60px 24px;
+  }
+  .client-real-name {
+    bottom: 36px;
   }
   .client-meta {
     gap:  20px;

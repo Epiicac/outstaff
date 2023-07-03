@@ -13,7 +13,7 @@
 @media screen and (min-width: 1280px) {
   :root {
     --big-radius: 64px;
-    --medium-radius: 48px;
+    --medium-radius: 36px;
     --small-radius: 24px;
     
     --normal-size: 18px;

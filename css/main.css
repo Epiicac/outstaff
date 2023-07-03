@@ -38,6 +38,7 @@ section {
 }
 span, p, input, input::placeholder {
   color: var(--text-main-color);
+  font-family: "TT Norms Pro"
 }
 ul {
   list-style: none;
@@ -56,6 +57,10 @@ input[type="file"] {
 .wrapper {
   padding: 0 var(--wrapper-padding);
   margin: 0 auto;
+}
+
+.banner-tag-element {
+  font-family: "TT Norms Pro"
 }
 
 .menu-items {
@@ -85,6 +90,12 @@ input[type="file"] {
 
 .button {
   background-color: var(--main-color);
+}
+.button:hover {
+  --main-color: #7A48FF;
+}
+.button:focus {
+  --main-color: #6228FF;
 }
 .header-button {
   padding: 11px 24px;
@@ -413,14 +424,16 @@ input[type="file"] {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+#contractor-email {
+  padding-left: 12px;
+}
 .clients-wrapper {
   display: flex;
-  align-items: baseline;
 }
 .client-card {
   background-color: var(--card-bg-color);
   border-radius: var(--medium-radius);
+  position: relative;
 }
 .client-meta {
   display: flex;
@@ -441,11 +454,16 @@ input[type="file"] {
   align-items: center;
   gap: 10px;
   margin-bottom: -5px;
+  position: absolute;
 }
 .client-real-name::before {
   content: url('../images/quote.svg');
   width: 20px;
   height: 20px;
+}
+swiper-container {
+  padding-left: var(--wrapper-padding) !important;
+  margin: 0 calc(-1 * var(--wrapper-padding)) !important;
 }
 
 .accordeon-body {
@@ -467,8 +485,8 @@ input[type="file"] {
   user-select: none;
 }
 .accordeon-question img {
-  width: 18px;
-  height: 12px;
+  width: 15px;
+  height: 9px;
   transition: .3s;
 }
 .accordeon-subject {
