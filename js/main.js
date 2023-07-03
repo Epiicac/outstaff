@@ -52,7 +52,7 @@ processEl.initialize()
 
 function toggleAccordeon(el) {
   const elHeight = el.offsetHeight
-  const elDescHeight = el.children[1].children[0].offsetHeight + el.children[1].children[1].offsetHeight
+  const elDescHeight = el.children[1].children[0].offsetHeight
   if (el.children[0].offsetHeight === el.offsetHeight) {
     el.style.height = elHeight + elDescHeight + 'px'
     el.style.backgroundColor = '#1A1A1A'
@@ -64,7 +64,8 @@ function toggleAccordeon(el) {
   }
 }
 
-document.querySelectorAll('.accordeon-body').forEach((e) => { e.style.height = e.offsetHeight + 'px' })
+
+document.querySelectorAll('.accordeon-body').forEach((e) => { e.style.height = e.offsetHeight + (window.innerWidth < 1280) + (window.innerWidth < 484) + 'px' })
 
 
 
