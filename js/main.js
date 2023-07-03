@@ -65,7 +65,7 @@ function toggleAccordeon(el) {
 }
 
 
-document.querySelectorAll('.accordeon-body').forEach((e) => { e.style.height = e.offsetHeight + (window.innerWidth < 1280) + (window.innerWidth < 484) + 'px' })
+document.querySelectorAll('.accordeon-body').forEach((e) => { e.style.height = e.children[0].offsetHeight + (window.innerWidth < 1280) + (window.innerWidth < 484) + 'px' })
 
 
 

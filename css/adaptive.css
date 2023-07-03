@@ -106,8 +106,29 @@
 }
 
 @media screen and (max-width: 1279px) {
-  
-
+  .copywrite {
+    color: var(--text-accent-color);
+  }
+  .afterparty {
+    flex-direction: column;
+    gap: 24px;
+    padding: 36px;
+  }
+  .afterparty .afterparty-side:nth-child(1) {
+    order: 2;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .afterparty .afterparty-side:nth-child(2) {
+    order: 1;
+  }
+  .afterparty .afterparty-side:nth-child(3) {
+    order: 3
+  }
+  .afterparty .afterparty-side {
+    width: unset;
+    text-align: center
+  }
   .first-part {
     height: 319px;
     margin-top: 80px;
@@ -349,6 +370,15 @@
 }
 
 @media screen and (max-width: 483px) {
+  .credentials {
+    margin: 24px 0;
+  }
+  .footer-number {
+    margin-top: 36px;
+  }
+  .afterparty-side:nth-child(2) {
+    gap: 36px;
+  }
   .accordeon-question {
     padding: 24px;
     background-color: var(--card-bg-color);
