@@ -217,7 +217,7 @@
           <div class="grid-card col2">
             <div class="grid-card-content">
               <h3>Адаптивность<br>и кроссбраузерность</h3>
-              <span>Способствует улучшению SEO<br>показателей, увеличению охвата<br>и удовлетворенности аудитории</span>
+              <span>Способствует увеличению охвата<br>и побуждает клиентов совершить<br>целевое действие.</span>
             </div>
             <div class="grid-card-image">
               <img draggable="false" src="images/phone_icon.svg" alt="Phone icon">
@@ -264,6 +264,18 @@
           <span class="contractor-description">Нажимая на кнопку «Оформить»,<br>вы соглашаетесь с политикой обработки персональных данных.</span>
         </div>
       </section>
+      <script>
+        document.querySelector('.contractor-input').addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.querySelector('#contractor-email').value
+          options = {
+            method: "GET",
+            cors: "no-cors"
+          }
+          fetch('sendMail.php?email=' + email)
+            .then(data => emailSuccess(data))
+        })
+      </script>
       <section id="process">
         <div class="process">
           <div class="process-controls section-title">
@@ -394,7 +406,7 @@
                 </div>
               </div>
               <div onclick="toggleAccordeon(this)" class="accordeon-body">
-                <span class="accordeon-question">Пишите ли вы сами тексты для лендингов?<img draggable="false" src="images/accordeon_arrow.svg" alt="^"></span>
+                <span class="accordeon-question">Пишите ли вы сами текст для лендингов?<img draggable="false" src="images/accordeon_arrow.svg" alt="^"></span>
                 <div class="accordeon-subject">
                   <div class="small accordeon-subject-text">
                     Да, в тарифе “Профессиональный” мы тщательно прорабатываем контент, делаем его конверсионным, что способствует увеличению конверсий и продаж.
@@ -442,7 +454,7 @@
           </div>
           <div class="main-part">
             <textarea name="description" id="request-description" rows="3" placeholder="Напишите кратко о проекте"></textarea>
-            <input type="file" name="additional-file" id="file">
+            <input type="file" name="additional-file" id="file" multiple>
             <label class="add-file" for="file">
               <div class="file-icon">
                 <img draggable="false" src="images/clip.svg" alt="8">
@@ -482,7 +494,6 @@
       <div class="afterparty">
         <div class="afterparty-side">
           <a href="https://softmg.ru/agreement/">Политика конфиденциальности</a>
-          <a href="#">Документы</a>
         </div>
         <div class="afterparty-side">
           <a href="https://wa.me/79015171505">
@@ -500,6 +511,16 @@
         </div>
       </div>
     </footer>
+    <div class="sendmail-popup-wrapper hidden">
+      <div class="sendmail-popup">
+        <img src="./images/close-cross-poup.svg" alt="X" class="close-popup">
+        <div class="popup-contents">
+          <span class="popup-status">Успешно</span>
+          <span class="popup-title">Заявка оформлена!</span>
+          <span class="popup-description">Наши менеджеры свяжутся с вами в ближайшее время</span>
+        </div>
+      </div>
+    </div>
     <script src="js/main.js" type="text/javascript"></script>
     <script src="js/formHandler.js" type="text/javascript"></script>
   </body>

@@ -72,6 +72,12 @@
 }
 
 @media screen and (max-width: 700px) {
+  .popup-title {
+    font-size: 24px;
+  }
+  .popup-description {
+    margin-top: 16px;
+  }
   .marquee {
     animation: marquee linear infinite 10s;
   }
@@ -402,7 +408,6 @@
   .first-part {
     height: unset;
     padding: 60px 0 36px 0;
-    gap
   }
   .process-slider swiper-slide {
     width: 292px;

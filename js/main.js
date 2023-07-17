@@ -63,16 +63,27 @@ function toggleAccordeon(el) {
   }
 }
 
+setTimeout(() => {
+  document.querySelectorAll('.accordeon-body').forEach((e) => { e.style.height = e.children[0].offsetHeight + 'px' })
+}, 10)
 
-document.querySelectorAll('.accordeon-body').forEach((e) => { e.style.height = e.children[0].offsetHeight + (window.innerWidth < 1280) + (window.innerWidth < 484) + 'px' })
+function updateFiles() {
+  filelist = '<div class="selected-files">'
+  Array.from(document.querySelector('#file').files).forEach((file, index) => {
+    filename = file.name > 21 ? file.name.substr(0, 21) : file.name
+    filelist += `<span class="selected-file">${filename}<img class="remove-file" data-id="${index}" src="./images/filecross.svg"></span>`
+  })
+  document.querySelector('.file-desc').innerHTML = filelist + '</div>'
+  
+  document.querySelectorAll('.remove-file').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault()
+      removeFileFromFileList(Number(el.getAttribute('data-id')))
+    })
+  })
+}
 
-
-
-document.querySelector('#file').addEventListener('change', () => {
-  if (document.querySelector('#file').files) {
-    document.querySelector('.file-icon img').style.backgroundColor = 'var(--main-color)'
-  }
-})
+document.querySelector('#file').addEventListener('change', updateFiles)
 
 document.querySelector('.menu-trigger').addEventListener('click', () => {
   const wrapper = document.querySelector('.slide-menu-wrapper')
@@ -92,4 +103,29 @@ document.querySelector('.slide-menu .menu-items').addEventListener('click', () =
 document.querySelector('.main-nav.mobile .logo').addEventListener('click', () => {
   document.querySelector('.slide-menu-wrapper').classList.remove('active')
   document.querySelector('.menu-trigger img').setAttribute('src', 'images/burger.svg')
+})
+
+document.querySelector('.slide-menu-wrapper .header-button').addEventListener('click', () => {
+  document.querySelector('.slide-menu-wrapper').classList.toggle('active')
+  document.querySelector('.menu-trigger img').setAttribute('src', 'images/burger.svg')
+})
+
+
+function removeFileFromFileList(index) {
+  const dt = new DataTransfer()
+  const input = document.querySelector('#file')
+  const { files } = input
+  
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i]
+    if (index !== i)
+      dt.items.add(file)
+  }
+  
+  updateFiles()
+  input.files = dt.files
+}
+
+document.querySelector('.close-popup').addEventListener('click', () => {
+  document.querySelector('.sendmail-popup-wrapper').style.display = 'none'
 })
