@@ -267,7 +267,6 @@
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
-    height: 819px;
   }
   .slider-banner-content, .slider-banner-item, .banner-pagination {
     max-width: calc(100vw - 168px);
@@ -449,9 +448,6 @@
   .section-title {
     max-width: 100%;
   }
-  .slider-banner {
-    height: 682px;
-  }
   .slider-banner-content, .slider-banner-item, .banner-pagination {
     max-width: calc(100vw - 80px);
     margin: 0;
@@ -539,8 +535,21 @@
     margin: 64px 0 48px 0;
   }
   .slider-banner .left {
-    width: calc(50% - 128px);
+    width: calc(66% - 128px);
     padding: 100px 64px;
+  }
+  .banner-item-count {
+    margin-top: 50px;
+    padding: 21px 26px;
+    display: ruby-base;
+    margin-bottom: 30px;
+    border-radius: 40px;
+    font-variant-numeric: tabular-nums;
+    border: 1px solid rgba(255, 255, 255, 0.3)
+  }
+  
+  .slider-banner-item {
+    width: 50%;
   }
   .banner {
     width: calc(100% - 128px);

@@ -751,3 +751,21 @@ swiper-container {
   margin-top: 24px;
   text-align: center;
 }
+
+.slider-banner-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.slider-banner-item {
+  width: 100%;
+}
+
+.banner-item-count {
+  margin-top: 50px;
+  padding: 21px 26px;
+  display: ruby-base;
+  margin-bottom: 30px;
+  border-radius: 40px;
+  font-variant-numeric: tabular-nums;
+  border: 1px solid rgba(255, 255, 255, 0.3)
+}
