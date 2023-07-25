@@ -112,7 +112,7 @@ input[type="file"] {
   display: ruby-base;
 }
 .banner {
-  background-image: url("../images/banner.png");
+  background-image: url("../images/banner.webp");
   background-color: var(--card-bg-color);
   background-position: center center;
   background-size: cover;
@@ -334,7 +334,7 @@ input[type="file"] {
 }
 
 .contractor-form {
-  background-image: url('../images/contractor.png');
+  background-image: url('../images/contractor.webp');
   background-color: var(--card-bg-color);
   background-position: top right;
   background-size: cover;
@@ -406,12 +406,12 @@ input[type="file"] {
   flex-direction: column;
   transition: .2s;
 }
-.swiper-slide-active .process-card {
+/* .swiper-slide-active .process-card {
   background-color: var(--main-color);
 }
 .swiper-slide-active .process-card span {
   color: var(--text-accent-color)
-}
+} */
 .process-card h3 {
   font-size: var(--accent3-size);
   margin-bottom: 36px;
@@ -687,10 +687,13 @@ swiper-container {
   top: 0;
   left: 0;
   z-index: 5;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 12px;
+}
+.sendmail-popup-wrapper.hidden {
+  display: none;
 }
 .sendmail-popup {
   padding: 30px;
@@ -709,6 +712,7 @@ swiper-container {
   background-color: #323232;
   position: relative;
   z-index: 6;
+  cursor: pointer;
 }
 .popup-contents {
   width: 100%;

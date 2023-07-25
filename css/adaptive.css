@@ -263,7 +263,7 @@
     max-width: 80%;
   }
   .slider-banner {
-    background-image: url("../images/slider_banner_mobile.png");
+    background-image: url("../images/slider_banner_mobile.webp");
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -301,7 +301,7 @@
     margin: 48px 0;
   }
   .banner {
-    background-image: url('../images/mobile_banner.png');
+    background-image: url('../images/mobile_banner.webp');
   }
   .main-nav {
     display: none;

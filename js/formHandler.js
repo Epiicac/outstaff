@@ -12,19 +12,34 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
         description.addEventListener('input', () => {
             description.style.outline = 'none'
         })
-    }
-    if (!name.value) {
-        name.style.outline = "rgb(255, 77, 87) solid 2px"
-        name.addEventListener('input', () => {
-            name.style.outline = 'none'
-        })
-    }
-    console.log('phone ' + phoneRegex.test(contacts.value))
-    console.log('email ' + emailRegex.test(contacts.value))
-    if (!contacts.value || !(phoneRegex.test(contacts.value) || emailRegex.test(contacts.value))) {
-        contacts.style.outline = "rgb(255, 77, 87) solid 2px"
-        contacts.addEventListener('input', () => {
-            contacts.style.outline = 'none'
-        })
+    } else {
+        if (!name.value) {
+            name.style.outline = "rgb(255, 77, 87) solid 2px"
+            name.addEventListener('input', () => {
+                name.style.outline = 'none'
+            })
+        } else {
+            if (!contacts.value || !(phoneRegex.test(contacts.value) || emailRegex.test(contacts.value))) {
+                contacts.style.outline = "rgb(255, 77, 87) solid 2px"
+                contacts.addEventListener('input', () => {
+                    contacts.style.outline = 'none'
+                })
+            } else {
+                const data = {
+                    name: name.value,
+                    description: description.value,
+                    contacts: contacts.value
+                }
+                handleEmail(data)
+            }
+        }
     }
 })
+document.querySelector('.contractor-input').addEventListener('submit', (e) => {
+    e.preventDefault()
+    handleEmail([])
+})
+
+function handleEmail(data) {
+    document.querySelector('.sendmail-popup-wrapper').classList.toggle('hidden')
+}

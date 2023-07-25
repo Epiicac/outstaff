@@ -151,7 +151,7 @@
             </swiper-container>
           </div>
           <div class="right">
-            <img draggable="false" src="images/slider-banner.png" alt="Phones" class="slider-banner-image" draggable="false">
+            <img draggable="false" src="images/slider-banner.webp" alt="Phones" class="slider-banner-image" draggable="false">
           </div>
         </div>
       </section>
@@ -178,7 +178,7 @@
             <ul class="rate-benefits">
               <li>Индивидуальный дизайн</li>
               <li>Конверсионный текст</li>
-              <li>Адаптивная верстка</li>
+              <li>Возможность интеграций</li>
               <li>Активные формы обратной связи</li>
             </ul>
           </div>
@@ -265,16 +265,17 @@
         </div>
       </section>
       <script>
-        document.querySelector('.contractor-input').addEventListener('submit', (e) => {
-          e.preventDefault();
-          const email = document.querySelector('#contractor-email').value
-          options = {
-            method: "GET",
-            cors: "no-cors"
-          }
-          fetch('sendMail.php?email=' + email)
-            .then(data => emailSuccess(data))
-        })
+        // send email
+        // document.querySelector('.contractor-input').addEventListener('submit', (e) => {
+        //   e.preventDefault();
+        //   const email = document.querySelector('#contractor-email').value
+        //   options = {
+        //     method: "GET",
+        //     cors: "no-cors"
+        //   }
+        //   fetch('sendMail.php?email=' + email)
+        //     .then(data => emailSuccess(data))
+        // })
       </script>
       <section id="process">
         <div class="process">
@@ -406,7 +407,7 @@
                 </div>
               </div>
               <div onclick="toggleAccordeon(this)" class="accordeon-body">
-                <span class="accordeon-question">Пишите ли вы сами текст для лендингов?<img draggable="false" src="images/accordeon_arrow.svg" alt="^"></span>
+                <span class="accordeon-question">Какой контент будет размещен на лендинге?<img draggable="false" src="images/accordeon_arrow.svg" alt="^"></span>
                 <div class="accordeon-subject">
                   <div class="small accordeon-subject-text">
                     Да, в тарифе “Профессиональный” мы тщательно прорабатываем контент, делаем его конверсионным, что способствует увеличению конверсий и продаж.

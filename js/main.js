@@ -127,5 +127,5 @@ function removeFileFromFileList(index) {
 }
 
 document.querySelector('.close-popup').addEventListener('click', () => {
-  document.querySelector('.sendmail-popup-wrapper').style.display = 'none'
+  document.querySelector('.sendmail-popup-wrapper').classList.toggle('hidden')
 })
