@@ -763,7 +763,7 @@ swiper-container {
 .banner-item-count {
   margin-top: 50px;
   padding: 21px 26px;
-  display: ruby-base;
+  display: inline-block;
   margin-bottom: 30px;
   border-radius: 40px;
   font-variant-numeric: tabular-nums;
