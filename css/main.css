@@ -198,6 +198,7 @@ input[type="file"] {
   bottom: 0;
   pointer-events: none;
   border-radius: 0 0 var(--big-radius) 0;
+  z-index: 1;
 }
 .slider-banner .right {
   position: relative;
@@ -755,6 +756,8 @@ swiper-container {
 .slider-banner-content {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
 .slider-banner-item {
   width: 100%;
