@@ -1,21 +1,5 @@
 swiperEl = document.querySelector('.slider-banner-content')
 
-const params = {
-  pagination: {
-    el: '.banner-pagination',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    }
-  },
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  }
-}
-
-Object.assign(swiperEl, params)
-swiperEl.initialize()
 
 
 
