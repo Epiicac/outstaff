@@ -335,10 +335,11 @@ input[type="file"] {
 }
 
 .contractor-form {
-  background-image: url('../images/contractor.webp');
+  background-image: url('../images/contractor.png');
   background-color: var(--card-bg-color);
   background-position: top right;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   border-radius: var(--medium-radius);
 }
 .contractor-subtitle {
