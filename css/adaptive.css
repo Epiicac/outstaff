@@ -263,7 +263,10 @@
     max-width: 80%;
   }
   .slider-banner {
-    background: transparent;
+    background-image: url();
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
   }
   .slider-banner-content, .slider-banner-item, .banner-pagination {
     max-width: calc(100vw - 168px);
