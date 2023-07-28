@@ -263,10 +263,7 @@
     max-width: 80%;
   }
   .slider-banner {
-    background-image: url("../images/slider_banner_mobile.webp");
-    background-size: contain;
-    background-position: center bottom;
-    background-repeat: no-repeat;
+    background: transparent;
   }
   .slider-banner-content, .slider-banner-item, .banner-pagination {
     max-width: calc(100vw - 168px);
@@ -520,7 +517,7 @@
   }
 
   .slider-banner-description {
-    max-width: 65%;
+    max-width: 90%;
   }
   .slider-banner-title {
     margin-bottom: 24px;

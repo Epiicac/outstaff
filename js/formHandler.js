@@ -31,6 +31,10 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
                     contacts: contacts.value
                 }
                 handleEmail(data)
+                document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((el) => { 
+                    el.value = null
+                    el.checked = false
+                })
             }
         }
     }
