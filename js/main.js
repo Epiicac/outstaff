@@ -110,6 +110,13 @@ function removeFileFromFileList(index) {
   input.files = dt.files
 }
 
-document.querySelector('.close-popup').addEventListener('click', () => {
-  document.querySelector('.sendmail-popup-wrapper').classList.toggle('hidden')
+document.querySelectorAll('.close-popup').forEach((el) => {
+  el.addEventListener('click', () => {
+    document.querySelector('.sendmail-popup-wrapper').classList.add('hidden')
+    document.querySelector('.offer-request-wrapper').classList.add('hidden')
+  })
 })
+
+function openRequest(el) {
+  document.querySelector('.offer-request-wrapper').classList.remove('hidden')
+}

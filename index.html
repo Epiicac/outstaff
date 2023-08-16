@@ -169,7 +169,7 @@
             <span class="accent3 rate-title">Базовый</span>
             <span class="accent2 rate-price">129 990 ₽</span>
             <span class="small rate-description">Идеально для малого бизнеса и презентации услуг или товаров</span>
-            <a href="#form" class="button rate-button">Оформить заявку</a>
+            <a onclick="openRequest(this)" class="button rate-button">Оформить заявку</a>
             <ul class="rate-benefits">
               <li>Индивидуальный дизайн</li>
               <li>Копирайтинг</li>
@@ -181,7 +181,7 @@
             <span class="accent3 rate-title">Профессиональный</span>
             <span class="accent2 rate-price">179 990 ₽</span>
             <span class="small rate-description">Подходит, если нужно повысить продажи или проверить гипотезы</span>
-            <a href="#form" class="button rate-button">Оформить заявку</a>
+            <a onclick="openRequest(this)" class="button rate-button">Оформить заявку</a>
             <ul class="rate-benefits">
               <li>Индивидуальный дизайн</li>
               <li>Конверсионный текст</li>
@@ -193,7 +193,7 @@
             <span class="accent3 rate-title">Индивидуальный</span>
             <span class="accent2 rate-price">Персонально</span>
             <span class="small rate-description">Решение для тех, кому не подходят стандартные решения</span>
-            <a href="#form" class="button rate-button">Оформить заявку</a>
+            <a onclick="openRequest(this)" class="button rate-button">Оформить заявку</a>
             <span class="small">Если вы хотите  больше, чем готовый  тариф, оставляйте заявку, и мы подготовим для вас индивидуальное решение</span>
           </div>
         </div>
@@ -526,6 +526,25 @@
           <span class="popup-status">Успешно</span>
           <span class="popup-title">Заявка оформлена!</span>
           <span class="popup-description">Наши менеджеры свяжутся с вами в ближайшее время</span>
+        </div>
+      </div>
+    </div>
+    <div class="offer-request-wrapper hidden">
+      <div class="offer-request sendmail-popup">
+        <img src="./images/close-cross-poup.svg" alt="X" class="close-popup">
+        <div class="request-contents main-part">
+          <span class="offer-request-title">Оформить заявку</span>
+          <span class="offer-request-description">Заполните форму и мы свяжемся с вами.</span>
+          <form id="request-offer">
+            <div class="request-offer-inputs">
+              <input placeholder="Как вас зовут?" type="text" name="name" id="name-request">
+              <input placeholder="Телефон или email" type="text" name="contacts" id="contacts-request">
+              <span class="offer-error-name">&nbsp;</span>
+              <span class="offer-error-contacts">&nbsp;</span>
+            </div>
+            <input class="button" id="send-form-request" type="submit" value="Отправить">
+            <span class="offer-request-description">Нажимая на кнопку, вы соглашаетесь с политикой обработки персональных данных.</span>
+          </form>
         </div>
       </div>
     </div>
