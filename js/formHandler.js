@@ -75,6 +75,7 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
 })
 document.querySelector('.contractor-input').addEventListener('submit', (e) => {
     e.preventDefault()
+    document.querySelector('.contractor-input input[type="email"]').value = null
     handleEmail([])
 })
 
