@@ -67,6 +67,7 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
                 name: name.value,
                 contacts: contacts.value
             }
+            document.querySelectorAll('#request-offer input').forEach((el) => { el.value = null })
             document.querySelector('.offer-request-wrapper').classList.add('hidden')
             handleEmail(data)
         }
