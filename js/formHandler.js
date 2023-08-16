@@ -52,7 +52,7 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
         name.addEventListener('input', () => {
             name.style.outline = 'none'
         })
-        document.querySelector('.offer-error-name').innerHTML = 'Неправильная фома'
+        document.querySelector('.offer-error-name').innerHTML = 'Неправильная форма'
     } else {
         document.querySelector('.offer-error-name').innerHTML = '&nbsp;'
         if (!contacts.value || !(phoneRegex.test(contacts.value) || emailRegex.test(contacts.value))) {
@@ -60,7 +60,7 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
             contacts.addEventListener('input', () => {
                 contacts.style.outline = 'none'
             })
-            document.querySelector('.offer-error-contacts').innerHTML = 'Неправильная фома'
+            document.querySelector('.offer-error-contacts').innerHTML = 'Неправильная форма'
         } else {
             document.querySelector('.offer-error-contacts').innerHTML = '&nbsp;'
             const data = {
