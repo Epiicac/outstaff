@@ -24,9 +24,9 @@ h3 {
   margin: 0;
   font-weight: 500;
 }
-h1 { font-size: var(--h1-size) }
-h2 { font-size: var(--h2-size) }
-h3 { font-size: var(--h3-size) }
+h1, .h1 { font-size: var(--h1-size) }
+h2, .h2 { font-size: var(--h2-size) }
+h3, .h3 { font-size: var(--h3-size) }
 a {
   text-decoration: none;
   color: var(--text-accent-color);
@@ -34,11 +34,15 @@ a {
   font-weight: 500;
 }
 section {
+  max-width: 1295px;
   padding-top: var(--block-padding);
+  margin: 0 auto;
 }
-span, p, input, input::placeholder {
+span, p, input, li, input::placeholder {
   color: var(--text-main-color);
-  font-family: "TT Norms Pro"
+  font-family: "TT Norms Pro";
+  font-weight: 500;
+  margin: 0;
 }
 ul {
   list-style: none;
@@ -56,9 +60,10 @@ input[type="file"] {
 
 .wrapper {
   padding: 0 var(--wrapper-padding);
-  margin: 0 auto;
 }
-
+.wide {
+  max-width: none;
+}
 .banner-tag-element {
   font-family: "TT Norms Pro"
 }
@@ -87,6 +92,14 @@ input[type="file"] {
   display: flex;
   align-items: center;
 }
+.main-nav .menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1295px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 .button {
   background-color: var(--main-color);
@@ -100,6 +113,9 @@ input[type="file"] {
 .header-button {
   padding: 11px 24px;
   border-radius: 13px;
+}
+.half {
+  width: 50%;
 }
 .header-button::before {
   content: url("../images/circle.svg");
@@ -148,7 +164,9 @@ input[type="file"] {
   margin: 36px 0;
 }
 .banner-description {
-  font-family: "TT Norms Pro"
+  font-size: var(---normal-size);
+  font-family: "TT Norms Pro";
+  margin-bottom: 100px;
 }
 .accordeon-question {
   position: relative;
@@ -161,7 +179,6 @@ input[type="file"] {
 .accent1, .accent2, .accent3 {
   color: var(--text-accent-color);
   font-family: "TT Norms Pro";
-  font-weight: 500;
 }
 .accent1 { font-size: var(--accent1-size); }
 .accent2 { font-size: var(--accent2-size); }
@@ -179,11 +196,6 @@ input[type="file"] {
 .section-title {
   margin: var(--title-margin);
   line-height: 100%;
-}
-.rate-button {
-  text-align: center;
-  padding: 11px;
-  border-radius: 13px;;
 }
 .slider-banner {
   display: flex;
@@ -296,49 +308,11 @@ input[type="file"] {
   }
 }
 
-.grid-cards {
-  display: grid;
-}
-.grid-card {
-  background-color: var(--card-bg-color);
-  display: flex;
-  justify-content: space-between;
-  border-radius: var(--medium-radius);
-  overflow: hidden;
-}
-.grid-card-content {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-wrap: wrap;
-}
-.grid-card-content * {
-  width: 100%;
-}
-.grid-card-image {
-  position: relative;
-}
-.grid-card-image img {
-  position: absolute;
-  right: 0;
-}
-.grid-card-content span {
-  font-size: var(--normal-size);
-  font-family: "TT Norms Pro";
-  font-weight: 500;
-  line-height: 140%;
-}
-.grid-card-content img {
-  max-width: 100%;
-  width: 100%;
-  overflow: auto;
-}
-
 .contractor-form {
   background-image: url('../images/contractor.png');
   background-color: var(--card-bg-color);
-  background-position: top right;
-  background-size: contain;
+  background-position: bottom right;
+  background-size: unset;
   background-repeat: no-repeat;
   border-radius: var(--medium-radius);
 }
@@ -368,11 +342,12 @@ input[type="file"] {
   outline: none;
 }
 .contractor-input button {
-  padding: 11px 40px;
+  padding: 12px 40px;
   font-family: "TT Norms Pro";
   font-size: var(--small-size);
   background-color: #FFFFFF;
   border-radius: 13px;
+  font-weight: 500;
   border: none;
   cursor: pointer;
 }
@@ -384,44 +359,53 @@ input[type="file"] {
   font-family: "TT Norms Pro";
   line-height: 140%;
 }
-.process-controls {
+.advant-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.process-navigation {
+.advant-navigation {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-#prevProcess,
-#nextProcess {
+#prevAdvant,
+#nextAdvant {
   cursor: pointer;
 }
-.process-controls {
+.advant-controls {
   max-width: 100% !important;
 }
-.process-card {
+.advant-card {
   background-color: var(--card-bg-color);
   border-radius: var(--medium-radius);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   transition: .2s;
 }
-/* .swiper-slide-active .process-card {
+.advant-card:hover {
   background-color: var(--main-color);
 }
-.swiper-slide-active .process-card span {
+
+/* .swiper-slide-active .advant-card {
+  background-color: var(--main-color);
+}
+.swiper-slide-active .advant-card span {
   color: var(--text-accent-color)
 } */
-.process-card h3 {
-  font-size: var(--accent3-size);
+.advant-card h3 {
+  font-size: 24px;
   margin-bottom: 36px;
 }
-.process-card span {
+.advant-card span {
   font-family: "TT Norms Pro";
   font-size: var(--normal-size);
   line-height: 140%;
+  transition: .2s;
+}
+.advant-card:hover span {
+  color: var(--text-accent-color);
 }
 
 .partners-title {
@@ -634,6 +618,10 @@ swiper-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.first-part-wrapper {
   padding: 0 var(--wrapper-padding);
   background-color: var(--card-bg-color);
 }
@@ -671,10 +659,14 @@ swiper-container {
   margin-bottom: 10px;
 }
 .afterparty {
-  padding: 21px var(--wrapper-padding);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.afterparty-wrapper {
+  padding: 21px var(--wrapper-padding);
 }
 .afterparty-side {
   display: flex;
@@ -758,14 +750,240 @@ swiper-container {
   text-align: center;
 }
 
-.slider-banner-content {
+
+
+
+
+.choise-cards {
+  display: flex;
+  gap: 36px;
+}
+.choise-card {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  border-radius: var(--medium-radius);
+  background-color: var(--card-bg-color);
+}
+.choise-card .card-title {
+  margin: 0 0 36px;
+}
+.choise-card .card-img {
+  margin: 0 0 40px;
+}
+.choise-card .card-img img {
+  display: block;
+  margin: 0 auto;
+}
+.choise-card .card-text {
+  font-size: var(--normal-size);
+  font-weight: 500;
+}
+
+.work {
+  padding: 48px;
+  border-radius: var(--medium-radius);
+  background-color: var(--card-bg-color);
+}
+.work-title {
+  font-size: 'TT Norms Pro';
+  margin: 0 0 80px;
+}
+.work-cards {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
-  z-index: 2;
+  gap: 48px;
 }
-.slider-banner-item {
-  width: 100%;
+.work-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-gray-color);
+  padding: 48px;
+  gap: 24px;
+  width: calc(50% - 120px);
+  border-radius: var(--small-radius);
+}
+.work-card .card-icon img {
+  width: 48px;
+  height: 48px;
+}
+.work-card span {
+  color: var(--text-accent-color);
+  font-weight: 500;
+}
+
+.outsource-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: var(--title-margin);
+}
+.outsource-title span {
+  font-size: var(--small-size);
+  font-weight: 500;
+}
+.outsource {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+.outsource-n, .outsource-l {
+  display: flex;
+  flex-direction: column;
+  padding: 36px;
+  border-radius: var(--small-radius);
+  background-color: var(--card-bg-color);
+  width: calc(50% - 90px);
+}
+.outsource-l {
+  flex-grow: 1;
+}
+.outsource-n .h3, .outsource-l .h3 {
+  color: var(--text-accent-color);
+  margin: 0 0 16px;
+}
+.outsource-n p, .outsource-l p {
+  color: var(--text-accent-color);
+  margin: 0 0 30px;
+}
+.outsource-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 18px 48px;
+  font-weight: 500;
+}
+.outsource-list li {
+  display: flex;
+  align-items: center;
+  width: calc(50% - 24px);
+}
+.outsource-l .outsource-list {
+  gap: 18px;
+}
+.outsource-l .outsource-list li {
+  width: unset;
+}
+.outsource-list li:before {
+  content: url("../images/benefits.svg");
+  height: 20px;
+  margin-right: 10px;
+}
+.outsource-button {
+  text-align: center;
+  padding: 20px;
+  border-radius: var(--small-radius);
+  margin: 36px 0 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+.team-card {
+  display: flex;
+  flex-direction: column;
+  padding: 36px;
+  border-radius: var(--small-radius);
+  width: calc((100% / 3) - 96px);
+  background-color: var(--card-bg-color);
+}
+.team-card-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 36px;
+}
+.team-card-title .level {
+  color: var(--text-accent-color);
+  padding: 4px 10px;
+  background-color: var(--main-color);
+  border-radius: 6px;
+  margin-right: 5px;
+}
+.team-card-title .exp {
+  margin-top: 5px;
+}
+.team-card .spec {
+  color: var(--text-accent-color);
+  font-size: var(--accent3-size);
+  margin: 0 0 6px;
+}
+.team-card .price {
+  font-size: var(--h3-size);
+  font-weight: 500;
+  font-family: 'TT Norms Pro';
+  color: var(--text-accent-color);
+  margin: 0 0 24px;
+}
+.team-card .price span {
+  color: var(--text-accent-color);
+  font-size: var(--accent3-size);
+}
+
+.process {
+  padding: 48px;
+  border-radius: var(--medium-radius);
+  background-color: var(--card-bg-color);
+}
+.process h3 {
+  margin: 0 0 48px;
+}
+.process .tabs-holder {
+  display: flex;
+  gap: 36px;
+}
+.process .tabs-content,
+.process .tabs-head {
+  width: 50%;
+}
+.process .tabs-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.process .tab-head {
+  display: flex;
+  flex-direction: column;
+  padding: 36px;
+  border-radius: var(--medium-radius);
+  cursor: pointer;
+  transition: .2s;
+}
+.process .tab-head.active {
+  background-color: var(--card-gray-color);
+}
+.process .tab-head:not(.active):hover {
+  background-color: var(--card-gray-color);
+}
+.process .tab-title {
+  color: var(--text-accent-color);
+  font-size: 22px;
+  margin-bottom: 16px;
+  pointer-events: none;
+}
+.process .tab-head p {
+  pointer-events: none;
+}
+.process .tab-content:not(.active) {
+  display: none;
+}
+.process .tab-content {
+  animation: fadeEffect 2s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.process .tab-img img {
+  display: block;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: var(--medium-radius);
 }
 
 .banner-item-count {
@@ -799,7 +1017,13 @@ swiper-container {
 }
 .request-offer-inputs input[type="text"] {
   background-color: #232323;
-  width: calc(50% - 58px);
+  width: calc(50% - 70px);
+}
+.request-offer-inputs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 #send-form-request {
   background-color: var(--main-color);

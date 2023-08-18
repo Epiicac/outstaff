@@ -3,13 +3,13 @@ swiperEl = document.querySelector('.slider-banner-content')
 
 
 
-processEl = document.querySelector('.process-slider')
+advantEl = document.querySelector('.advant-slider')
 
-const paramsProcess = {
+const paramsAdvant = {
   shouldPreventDefault: true,
   navigation: {
-    prevEl: '#prevProcess',
-    nextEl: '#nextProcess'
+    prevEl: '#prevAdvant',
+    nextEl: '#nextAdvant'
   },
   slideToClickedSlide: true,
   breakpoints: {
@@ -28,8 +28,8 @@ const paramsProcess = {
   }
 }
 
-Object.assign(processEl, paramsProcess)
-processEl.initialize()
+Object.assign(advantEl, paramsAdvant)
+advantEl.initialize()
 
 
 
@@ -40,10 +40,12 @@ function toggleAccordeon(el) {
     el.style.height = elHeight + elDescHeight + 'px'
     el.style.backgroundColor = '#1A1A1A'
     el.children[0].children[0].style.rotate = '180deg'
+    console.log(123);
   } else {
     el.style.height = el.children[0].offsetHeight + 'px'
     el.style.backgroundColor = '#000000'
     el.children[0].children[0].style.rotate = '0deg'
+    console.log(321)
   }
 }
 
@@ -120,3 +122,20 @@ document.querySelectorAll('.close-popup').forEach((el) => {
 function openRequest(el) {
   document.querySelector('.offer-request-wrapper').classList.remove('hidden')
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.tab-head')
+  tabs.forEach((el) => {
+    el.addEventListener('click', () => {
+      tabs.forEach((tab) => {
+        tab.classList.remove('active')
+      })
+      el.classList.add('active')
+      const content = document.querySelectorAll('.tab-content')
+      content.forEach((con) => {
+        con.classList.remove('active')
+      })
+      content[el.getAttribute('data-id')].classList.add('active') 
+    })
+  })
+})
