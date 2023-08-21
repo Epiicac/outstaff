@@ -68,15 +68,6 @@ input[type="file"] {
   font-family: "TT Norms Pro"
 }
 
-.menu-items {
-  display: flex;
-  font-weight: 500;
-}
-.menu-item {
-  color: var(--text-accent-color);
-  font-size: var(--menu-item-size);
-  font-family: "TT Norms Pro";
-}
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -88,6 +79,64 @@ input[type="file"] {
   top: 0;
   z-index: 4;
 }
+.menu-items {
+  display: flex;
+  font-weight: 500;
+  padding: 16px 36px;
+}
+.main-nav.mobile .menu-items {
+  margin-top: 100px;
+}
+.main-nav.mobile .menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-accent-color);
+  font-size: var(--small-size);
+  font-family: "TT Norms Pro";
+  padding: 16px 18px 16px 24px;
+  background-color: var(--card-bg-color);
+  border-radius: 18px;
+}
+.main-nav.mobile .menu-item:after {
+  content: url('/images/arr_right.svg');
+  display: block;
+  margin-left: auto;
+  height: 24px;
+}
+.menu-title span {
+  color: var(--text-accent-color);
+  font-size: var(--normal-size);
+}
+.slide-menu-bottom {
+  gap: 24px;
+  background-color: var(--card-bg-color);
+  padding: 24px 36px;
+}
+.slide-menu-bottom .header-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slide-menu-bottom .menu-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+  border-radius: 14px;
+  margin: 0 0 10px;
+}
+.slide-menu-bottom .header-social span {
+  font-size: 14px;
+}
+.social {
+  justify-content: space-between;
+}
+/* .main-nav.mobile {
+  background-color: var(--menu-bg);
+} */
 .main-nav .left nav, .main-nav .right {
   display: flex;
   align-items: center;
@@ -278,7 +327,7 @@ input[type="file"] {
   position: relative;
   font-family: "Roboto Flex";
   font-variation-settings: "opsz" 72, "GRAD" 150, "slnt" 0, "XTRA" 556, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 528, "YTAS" 750, "YTDE" -203, "YTFI" 738;
-  width: 200%;
+  width: 230%;
   display: flex;
 }
 .marquee div {
@@ -411,6 +460,7 @@ input[type="file"] {
 .partners-title {
   margin: 0 auto;
   display: table;
+  font-size: var(--normal-size);
 }
 .partners-wrapper {
   display: flex;
@@ -646,6 +696,7 @@ swiper-container {
   text-align: right;
   font-size: var(--accent2-size);
   color: var(--text-main-color);
+  text-decoration: underline;
 }
 .selected-files {
   display: flex;
@@ -671,6 +722,9 @@ swiper-container {
 .afterparty-side {
   display: flex;
   gap: 24px;
+}
+.afterparty-side span {
+  color: var(--text-accent-color);
 }
 .sendmail-popup-wrapper,
 .offer-request-wrapper {
@@ -769,11 +823,12 @@ swiper-container {
   margin: 0 0 36px;
 }
 .choise-card .card-img {
-  margin: 0 0 40px;
+  margin: 0 auto 40px;
 }
 .choise-card .card-img img {
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 .choise-card .card-text {
   font-size: var(--normal-size);
@@ -781,13 +836,11 @@ swiper-container {
 }
 
 .work {
-  padding: 48px;
   border-radius: var(--medium-radius);
   background-color: var(--card-bg-color);
 }
 .work-title {
-  font-size: 'TT Norms Pro';
-  margin: 0 0 80px;
+  font-family: 'TT Norms Pro';
 }
 .work-cards {
   display: flex;
@@ -979,8 +1032,13 @@ swiper-container {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+.process .tab-img {
+  margin: 0 auto;
+  width: fit-content;
+}
 .process .tab-img img {
   display: block;
+  width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: var(--medium-radius);
@@ -995,7 +1053,6 @@ swiper-container {
   font-variant-numeric: tabular-nums;
   border: 1px solid rgba(255, 255, 255, 0.3)
 }
-
 .offer-request-title {
   font-size: 36px;
   color: #fff;

@@ -40,12 +40,10 @@ function toggleAccordeon(el) {
     el.style.height = elHeight + elDescHeight + 'px'
     el.style.backgroundColor = '#1A1A1A'
     el.children[0].children[0].style.rotate = '180deg'
-    console.log(123);
   } else {
     el.style.height = el.children[0].offsetHeight + 'px'
     el.style.backgroundColor = '#000000'
     el.children[0].children[0].style.rotate = '0deg'
-    console.log(321)
   }
 }
 

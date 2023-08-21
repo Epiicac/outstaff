@@ -7,6 +7,7 @@
   --text-main-color: #9395A0;
   --card-bg-color: #1A1A1A;
   --card-gray-color: #2C2C2C;
+  --menu-bg: #0F0F0F;
 
   --animation-timing: .4s;
 }
@@ -55,6 +56,12 @@
   }
 }
 
+@media screen and (max-width: 700px) {
+  :root {
+    --h1-size: 36px;
+  }
+}
+
 @media screen and (max-width: 484px) {
   :root {
     --big-radius: 36px;
@@ -62,8 +69,9 @@
     --small-radius: 24px;
     
     --normal-size: 16px;
-    --h1-size: 42px;
-    --h2-size: 32px;
+    --small-size: 14px;
+    --h1-size: 36px;
+    --h2-size: 40px;
     --h3-size: 24px;
     --accent1-size: 36px;
     --accent2-size: 24px;
