@@ -1,126 +1,66 @@
+@media screen and (min-width: 1440px) {
+  .advant-slider {
+    margin-right: calc(-1 * (100vw - 1440px + (var(--wrapper-padding) * 2)) / 2) !important;
+  } 
+}
 @media screen and (min-width: 1280px) {
-  .advant-slider swiper-slide {
-    width: 389px;
-  }
-  .main-nav.mobile {
-    display: none !important;
-  }
-  .rate-button {
-    margin: 36px 0;
-  }
-
-  #first-slide {
-    padding-top: 116px;
-  }
-
-  .main-nav {
-    height: 116px;
-  }
-
-  .menu-items {
-    gap: 24px;
-    margin-left: 54px;
-  }
-
-  .slider-banner-description {
-    max-width: 90%;
-  }
-  .slider-banner-title {
-    margin-bottom: 24px;
-  }
-  .banner-pagination .swiper-pagination-bullet {
-    width: 67px;
-    height: 67px;
-    border-radius: 67px;
-  }
-  .banner-pagination {
-    gap: 8px;
-    margin: 64px 0 48px 0;
-  }
-  .slider-banner .left {
-    width: calc(66% - 128px);
-    padding: 100px 64px;
-  }
-  .banner-item-count {
-    margin-top: 50px;
-    padding: 21px 26px;
-    display: ruby-base;
-    margin-bottom: 30px;
-    border-radius: 40px;
-    font-variant-numeric: tabular-nums;
-    border: 1px solid rgba(255, 255, 255, 0.3)
-  }
-  
-  .slider-banner-item {
-    width: 50%;
-  }
-  .banner {
-    width: calc(100% - 128px);
-  }
-  .banner-button {
-    padding: 20px 50px;
-  }
-  
-  .main-nav .right {
-    gap: 24px;
-  }
-
-  .choise-card {
-    width: 50%;
-  }
-  .work {
-    padding: 48px;
-  }
-  .process .tab-head {
-    padding: 36px;
-  }
   .section-title {
     margin: var(--title-margin);
     max-width: 51%;
     line-height: 100%;
   }
 
+  .main-nav.mobile {
+    display: none !important;
+  }
+  .menu-items {
+    gap: 24px;
+    margin-left: 54px;
+  }
+  .main-nav {
+    height: 116px;
+  }
+  .main-nav .right {
+    gap: 24px;
+  }
+
+  #first-slide {
+    padding-top: 116px;
+  }  
+  .banner {
+    width: calc(100% - 128px);
+  }
+  .banner-button {
+    padding: 20px 50px;
+  }
+
+  .choise-card {
+    width: 50%;
+  }
+  
+  .advant-card-content {
+    margin-top: 112px;
+  }
+  .advant-card {
+    width: 317px;
+    height: 305px;
+    padding: 48px 36px 64px;
+  }
+  .advant-slider swiper-slide {
+    width: 389px;
+  }
+  .advant-section {
+    margin: 0px -72px;
+  }
+  .advant {
+    padding: 0px 72px;
+  }
+
+  .work {
+    padding: 48px;
+  }
   .work-title {
     margin: 0 0 80px;
-  }
-
-  .accent1 {
-    margin: 16px 0 36px 0;
-  }
-
-  .rate-cards {
-    gap: 64px;
-  }
-  .rate-card {
-    width: calc(33.333% - 128px / 3);
-    padding: 36px
-  }
-  .rate-title {
-    margin-bottom: 6px;
-  }
-  .rate-price {
-    margin-bottom: 24px;
-  }
-
-  .marquee {
-    padding: 35px 0;
-    font-size: 32px;
-    animation: marquee linear infinite 10s;
-  }
-
-  #procent {
-    margin: 71px -48px 10px -48px;
-    max-width: calc(100% + 96px);
-    width: calc(100% + 96px);
-  }
-  #arrow {
-    margin: 36px 0;
-  }
-  #list {
-    margin: 36px 0 60px 0;
-  }
-  #lock {
-    margin: 36px 0;
   }
 
   .contractor-form {
@@ -130,14 +70,14 @@
     margin-top: 12px;
   }
 
-  .advant-card-content {
-    margin-top: 112px;
+  .process .tab-head {
+    padding: 36px;
   }
 
-  .advant-card {
-    width: 317px;
-    height: 305px;
-    padding: 48px 36px 64px;
+  .marquee {
+    padding: 35px 0;
+    font-size: 32px;
+    animation: marquee linear infinite 10s;
   }
 
   .partners-wrapper img {
@@ -175,6 +115,7 @@
   .questions-wrapper .right {
     width: 60%;
   }
+
   .not-found-desc {
     margin-bottom: 30px;
   }
@@ -185,18 +126,12 @@
   .leave-request {
     margin-top: 36px;
   }
-
   .main-part {
     grid-template-columns: 463fr 463fr 322fr;
     gap: 24px;
   }
   .main-part textarea {
     grid-column: 1 / 3;
-  }
-
-  #about {
-    margin-top: 200px;
-    margin-bottom: -200px;
   }
 
   .first-part {
@@ -218,6 +153,183 @@
 }
 
 @media screen and (max-width: 1279px) {
+  .section-title {
+    max-width: 80%;
+  }
+  .slider-banner-title {
+    margin-bottom: 24px;
+  }
+  .main-nav {
+    display: none;
+  }
+  .main-nav.mobile {
+    display: flex;
+  }
+  .slide-menu-wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    pointer-events: none;
+    transition: .3s;
+  }
+  .slide-menu-wrapper.active {
+    pointer-events: all;
+    background: #000000cf;
+  }
+  .slide-menu {
+    background-color: #0F0F0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(100%);
+    transition: .3s ;
+  }
+  .slide-menu-wrapper.active .slide-menu {
+    transform: translateX(0);
+  }
+  .slide-menu-bottom {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+  .menu-trigger {
+    z-index: 2;
+  }
+  .logo {
+    position: relative;
+    z-index: 2;
+  }
+  .menu-items {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .social {
+    display: flex;
+    gap: 12px;
+  }
+
+  .banner .banner-button {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: -20px;
+  }
+
+  .choise-cards {
+    gap: 24px;
+  }
+  .choise-card {
+    width: 50%;
+  }
+
+  .advant-card h3 {
+    margin-bottom: 24px;
+  }
+  .advant-card > h3 {
+    margin-bottom: 64px;
+  }
+  .advant-slider swiper-slide {
+    width: 292px;
+  }
+  .advant-section {
+    margin: 0px -36px;
+  }
+  .advant {
+    padding: 0px 36px;
+  }
+
+  .work {
+    padding: 36px 24px 24px;
+  }
+  .work-cards {
+    gap: 24px;
+  }
+  .work-card {
+    width: calc(50% - 108px);
+  }
+  .work-title {
+    margin: 0 0 60px;
+  }
+
+  .outsource-n, .outsource-l {
+    width: 100%;
+  }
+
+  #contractor {
+    display: none;
+  }
+
+  .team {
+    gap: 24px;
+  }
+  .team-card {
+    width: calc((100% / 2) - 84px);
+  }
+
+  .process {
+    padding: 36px 24px 24px;
+  }
+  .process .tab-head {
+    padding: 24px;
+  }
+  
+  .toppings {
+    margin-top: 36px;
+  }
+  .not-found {
+    margin-top: 60px;
+  }
+  .not-found .button {
+    padding: 20px 50px;
+    align-self: center;
+    margin-top: 30px;
+  }
+  .questions-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .clients-wrapper {
+    gap: 30px;
+  }
+  .client-card {
+    width: 50%;
+    padding: 36px 24px 60px 24px;
+  }
+  .client-real-name {
+    bottom: 36px;
+  }
+  .client-meta {
+    gap:  20px;
+  }
+  
+  .partners-wrapper {
+    margin-top: 24px;
+  }
+  
+  .marquee-wrapper {
+    margin-top: 60px;
+  }
+  .marquee img {
+    width: 15px;
+  }
+  .marquee {
+    padding: 19px 0;
+    animation: marquee linear infinite 10s;
+  }  
+
+  footer {
+    margin-top: 60px;
+  }
   .copywrite {
     color: var(--text-accent-color);
   }
@@ -257,210 +369,9 @@
   .afterparty-side:nth-child(3) {
     justify-content: flex-end;
   }
-  .choise-cards {
-    gap: 24px;
-  }
-  .choise-card {
-    width: 50%;
-  }
-  .work {
-    padding: 36px 24px 24px;
-  }
-  .work-cards {
-    gap: 24px;
-  }
-  .work-card {
-    width: calc(50% - 108px);
-  }
-  .work-title {
-    margin: 0 0 60px;
-  }
-  .outsource-n, .outsource-l {
-    width: 100%;
-  }
-  .team {
-    gap: 24px;
-  }
-  .team-card {
-    width: calc((100% / 2) - 84px);
-  }
-  .process {
-    padding: 36px 24px 24px;
-  }
-  .process .tab-head {
-    padding: 24px;
-  }
-  footer {
-    margin-top: 60px;
-  }
-  .toppings {
-    margin-top: 36px;
-  }
-  .not-found {
-    margin-top: 60px;
-  }
+
   .leave-request .main-part {
     gap: 16px;
-  }
-  .add-file {
-    order: 3;
-    margin: 20px 0;
-  }
-  #contacts {
-    order: 2
-  }
-  #send-form {
-    order: 4
-  }
-  .not-found .button {
-    padding: 20px 50px;
-    align-self: center;
-    margin-top: 30px;
-  }
-  .questions-wrapper {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  .clients-wrapper {
-    gap: 30px;
-  }
-  .client-card {
-    width: 50%;
-    padding: 36px 24px 60px 24px;
-  }
-  .client-real-name {
-    bottom: 36px;
-  }
-  .client-meta {
-    gap:  20px;
-  }
-  .partners-wrapper {
-    margin-top: 24px;
-  }
-  .advant-card h3 {
-    margin-bottom: 24px;
-  }
-  .advant-card > h3 {
-    margin-bottom: 64px;
-  }
-  #contractor {
-    display: none;
-  }
-  .marquee-wrapper {
-    margin-top: 60px;
-  }
-  .marquee img {
-    width: 15px;
-  }
-  .marquee {
-    padding: 19px 0;
-    animation: marquee linear infinite 10s;
-  }
-  .rate-button {
-    margin: 24px 0;
-  }
-  .rate-description {
-    margin-top: 24px;
-  }
-  .rate-cards {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .rate-card {
-    padding: 36px;
-  }
-  .slider-banner-title {
-    margin-bottom: 24px;
-  }
-  .section-title {
-    max-width: 80%;
-  }
-  .banner-pagination .swiper-pagination-bullet {
-    width: 67px;
-    height: 67px;
-    border-radius: 67px;
-  }
-  .banner-pagination {
-    gap: 24px;
-    margin: 64px 0 36px 0;
-  }
-  .banner .accent1 {
-    margin: 16px 0 141px 0;
-  }
-  .banner .banner-button {
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: -20px;
-  }
-  .banner-title {
-    margin: 48px 0;
-  }
-  .banner {
-    background-image: url('../images/mobile_banner.webp');
-  }
-  .main-nav {
-    display: none;
-  }
-  .main-nav.mobile {
-    display: flex;
-  }
-  .slide-menu-wrapper {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
-    left: 0;
-    top: 0;
-    background-color: transparent;
-    display: flex;
-    justify-content: flex-end;
-    align-items: end;
-    pointer-events: none;
-    transition: .3s;
-  }
-  .slide-menu-wrapper.active {
-    pointer-events: all;
-    background: #000000cf;
-  }
-  .slide-menu {
-    background-color: #0F0F0F;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transform: translateX(100%);
-    transition: .3s ;
-  }
-  .slide-menu-wrapper.active .slide-menu {
-    transform: translateX(0);
-  }
-  .menu-trigger {
-    z-index: 2;
-  }
-  .logo {
-    position: relative;
-    z-index: 2;
-  }
-  .menu-items {
-    flex-direction: column;
-    gap: 16px;
-  }
-  .slide-menu-bottom {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-between;
-  }
-  .slide-menu-contacts {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-  }
-  .social {
-    display: flex;
-    gap: 12px;
   }
 }
 
@@ -475,6 +386,10 @@
 }
 
 @media screen and (min-width: 484px) and (max-width: 1279px) {
+  .menu-items {
+    padding: 16px 36px;
+  }
+
   .accordeon-question {
     padding: 36px;
     background-color: var(--card-bg-color);
@@ -482,46 +397,36 @@
   .accordeon-subject-text {
     padding: 0 36px 36px;
   }
+  .advant-card {
+    padding: 24px 24px 36px 24px;
+    width: 244px;
+    height: 220px;
+  }
+
   .partners-wrapper img {
     width: 20%;
-  }
-  .advant-card {
-    padding: 36px;
-  }
-  .rate-benefits {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .rate-benefits li {
-    width: calc(50% - 20px);
-  }
-
-  .menu-items {
-    padding: 16px 36px;
-  }
-
-  #procent {
-    margin: 68px -36px -10px -36px;
-    max-width: calc(100% + 72px);
-    width: calc(100% + 72px);
-    scale: 1.5
   }
 }
 
 @media screen and (max-width: 991px) {
-  .process .tabs-holder {
-    flex-direction: column;
-  }
-  .process .tabs-content, .process .tabs-head {
-    width: 100%;
-  }
   .slide-menu-bottom {
     padding: 24px 16px;
   }
   .social {
     flex-wrap: wrap;
   }
+
+  .banner-tags {
+    max-width: none;
+  }
+
+  .process .tabs-holder {
+    flex-direction: column;
+  }
+  .process .tabs-content, .process .tabs-head {
+    width: 100%;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -531,22 +436,7 @@
   .choise-card {
     width: fit-content;
   }
-  .work {
-    padding: 36px 16px 16px;
-  }
-  .work-card {
-    width: fit-content;
-    padding: 24px;
-  }
-  .outsource-list li {
-    width: 100%;
-  }
-  .team-card {
-    width: 100%;
-  }
-  .process {
-    padding: 36px 16px 16px;
-  }
+
   .outsource-title {
     flex-direction: column;
     align-items: flex-start;
@@ -554,6 +444,26 @@
   .outsource-title h2 {
     margin: 0 0 24px;
   }
+  .outsource-list li {
+    width: 100%;
+  }
+
+  .work {
+    padding: 36px 16px 16px;
+  }
+  .work-card {
+    width: fit-content;
+    padding: 24px;
+  }
+  
+  .team-card {
+    width: 100%;
+  }
+
+  .process {
+    padding: 36px 16px 16px;
+  }
+  
 }
 
 @media screen and (min-width: 484px) and (max-width: 768px) {
@@ -570,12 +480,6 @@
 }
 
 @media screen and (max-width: 700px) {
-  .popup-title {
-    font-size: 24px;
-  }
-  .popup-description {
-    margin-top: 16px;
-  }
   .marquee {
     animation: marquee linear infinite 10s;
   }
@@ -590,98 +494,41 @@
       left: -200%
     }
   }
+
+  .popup-title {
+    font-size: 24px;
+  }
+  .popup-description {
+    margin-top: 16px;
+  }
 }
 
 @media screen and (max-width: 582px) {
+  .advant-navigation {
+    display: none;
+  }
+
   .clients-wrapper {
     flex-wrap: wrap;
   }
   .clients-wrapper .client-card {
     width: 100%;
   }
-  .advant-navigation {
-    display: none;
+
+  .request-offer-inputs {
+    flex-direction: column;
+  }
+  .request-offer-inputs .left, .request-offer-inputs .right {
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 483px) {
-  .advant-card {
-    height: 240px;
-  }
-  .credentials {
-    margin: 24px 0;
-  }
-  .footer-number {
-    margin-top: 36px;
-  }
-  .afterparty-side:nth-child(2) {
-    gap: 36px;
-  }
-  .accordeon-question {
-    padding: 24px;
-    background-color: var(--card-bg-color);
-  }
-  .accordeon-subject-text {
-    padding: 0 24px 24px;
-  }
-  .partners-slide {
-    width: 50%;
-  }
-  .footer-row {
-    flex-direction: column;
-    text-align: center;
-  }
-  .first-part {
-    height: unset;
-    padding: 60px 0px 36px 0px;
-  }
-  .advant-slider swiper-slide {
-    width: 292px;
-  }
-  .advant-card {
-    padding: 24px;
-  }
-  #procent {
-    margin: 68px -36px -10px -36px;
-    max-width: calc(100% + 72px);
-    width: calc(100% + 72px);
-    scale: 1.5
-  }
-  .rate-card {
-    padding: 24px;
-  }
-  .section-title {
-    max-width: 100%;
-  }
-  .slider-banner-title {
-    margin-bottom: 24px;
-  }
-  .banner-pagination .swiper-pagination-bullet {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-  }
-  .banner-pagination {
-    gap: 8px;
-    margin: 36px 0 36px 0;
-  }
-  .slider-banner {
-    padding: 36px 24px;
-  }
-  .banner .accent1 {
-    margin: 16px 0 55px 0;
-  }
+@media screen and (max-width: 484px) {
   .main-nav {
     height: 72px;
   }
   .menu-items {
     padding: 16px;
-  }
-  .banner {
-    padding: 34px;
-  }
-  .banner-tags {
-    display: none;
   }
   .slide-menu {
     height: 100%;
@@ -692,6 +539,63 @@
   }
   img.header-element:nth-child(3) {
     display: none
+  }
+
+  .section-title {
+    max-width: 100%;
+  }
+
+  .banner {
+    padding: 34px;
+  }
+  .banner-tags {
+    display: none;
+  }
+
+  .advant-card {
+    height: 240px;
+  }
+  .advant-slider swiper-slide {
+    width: 292px;
+  }
+  .advant-card {
+    padding: 24px;
+  }
+  .advant-section {
+    margin: 0px -16px;
+  }
+  .advant {
+    padding: 0px 16px;
+  }
+
+  .partners-slide {
+    width: 50%;
+  }
+
+  .accordeon-question {
+    padding: 24px;
+    background-color: var(--card-bg-color);
+  }
+  .accordeon-subject-text {
+    padding: 0 24px 24px;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .first-part {
+    height: unset;
+    padding: 60px 0px 36px 0px;
+  }
+  .credentials {
+    margin: 24px 0;
+  }
+  .footer-number {
+    margin-top: 36px;
+  }
+  .afterparty-side:nth-child(2) {
+    gap: 36px;
   }
 }
 

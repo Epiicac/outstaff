@@ -19,7 +19,7 @@ const paramsAdvant = {
     },
     484: {
       spaceBetween: 24,
-      slidesPerView: 2
+      slidesPerView: 'auto'
     },
     1280: {
       spaceBetween: 36,
@@ -34,22 +34,14 @@ advantEl.initialize()
 
 
 function toggleAccordeon(el) {
-  const elHeight = el.offsetHeight
-  const elDescHeight = el.children[1].children[0].offsetHeight
-  if (el.children[0].offsetHeight === el.offsetHeight) {
-    el.style.height = elHeight + elDescHeight + 'px'
-    el.style.backgroundColor = '#1A1A1A'
-    el.children[0].children[0].style.rotate = '180deg'
+  el.classList.toggle('active')
+  var panel = el.querySelector('.accordeon-subject')
+  if (panel.style.maxHeight) {
+    panel.style.maxHeight = null
   } else {
-    el.style.height = el.children[0].offsetHeight + 'px'
-    el.style.backgroundColor = '#000000'
-    el.children[0].children[0].style.rotate = '0deg'
+    panel.style.maxHeight = panel.scrollHeight + 'px'
   }
 }
-
-setTimeout(() => {
-  document.querySelectorAll('.accordeon-body').forEach((e) => { e.style.height = e.children[0].offsetHeight + 'px' })
-}, 10)
 
 function updateFiles() {
   filelist = '<div class="selected-files">'

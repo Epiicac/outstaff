@@ -138,14 +138,14 @@
 				<h2 class="section-title">что выбрать?</h2>
 				<div class="choise-cards">
 					<div class="choise-card">
-						<span class="accent2 card-title">Аутсорсинг</span>
+						<span class="card-title">Аутсорсинг</span>
 						<div class="card-img">
 							<img draggable="false" src="images/outsource.png">
 						</div>
 						<span class="card-text">Вариант, кому не хватает времени на разработку своего проекта, и для тех, кто не хочет, кто не хочет терять контроль над своим бизнесом. Подходит для тех, кто хочет опробовать новые идеи.</span>
 					</div>
 					<div class="choise-card">
-						<span class="accent2 card-title">Аутстаффинг</span>
+						<span class="card-title">Аутстаффинг</span>
 						<div class="card-img">
 							<img draggable="false" src="images/outstaff.png">
 						</div>
@@ -153,7 +153,7 @@
 					</div>
 				</div>
 			</section>
-			<section>
+			<section class="advant-section">
 				<div class="advant">
 					<div class="advant-controls section-title">
 						<h2>Преимущества</h2>
@@ -621,10 +621,14 @@
 					<span class="offer-request-description">Заполните форму и мы свяжемся с вами.</span>
 					<form id="request-offer">
 						<div class="request-offer-inputs">
-							<input placeholder="Как вас зовут?" type="text" name="name" id="name-request">
-							<input placeholder="Телефон или email" type="text" name="contacts" id="contacts-request">
-							<span class="offer-error-name">&nbsp;</span>
-							<span class="offer-error-contacts">&nbsp;</span>
+							<div class="left">
+								<input placeholder="Как вас зовут?" type="text" name="name" id="name-request">
+								<span class="offer-error-name">&nbsp;</span>
+							</div>
+							<div class="right">
+								<input placeholder="Телефон или email" type="text" name="contacts" id="contacts-request">
+								<span class="offer-error-contacts">&nbsp;</span>
+							</div>
 						</div>
 						<input class="button" id="send-form-request" type="submit" value="Отправить">
 						<span class="offer-request-description">Нажимая на кнопку, вы соглашаетесь с политикой обработки персональных данных.</span>
