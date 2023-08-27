@@ -326,7 +326,7 @@ swiper-container {
   width: 48px;
   height: 48px;
 }
-.work-card span {
+.work-card .h3 {
   color: var(--text-accent-color);
   font-weight: 500;
 }
@@ -559,7 +559,6 @@ swiper-container {
 .process .tab-img img {
   display: block;
   width: 100%;
-  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: var(--medium-radius);
 }
@@ -579,6 +578,7 @@ swiper-container {
 }
 .marquee span {
   color: var(--text-accent-color);
+  font-family: "Roboto Flex";
 }
 .marquee-wrapper {
   position: relative;
@@ -680,12 +680,15 @@ swiper-container {
   max-height: 0;
   transition: .2s ease-out;
 }
+.accordeon-subject-text {
+  font-family: "TT Norms Pro";
+  font-weight: 500;
+}
 
 .not-found {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  position: sticky;
 }
 .not-found-title {
   color: var(--text-accent-color);
@@ -760,6 +763,10 @@ swiper-container {
   height: 23px;
   background-color: var(--card-bg-color);
   border-radius: 40px;
+  transition: .2s;
+}
+.file-icon img:hover {
+  background-color: #3E3E3E;
 }
 .file-icon {
   cursor: pointer;
@@ -843,7 +850,6 @@ swiper-container {
   text-align: right;
   font-size: var(--accent2-size);
   color: var(--text-main-color);
-  text-decoration: underline;
 }
 .selected-files {
   display: flex;

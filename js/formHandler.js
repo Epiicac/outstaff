@@ -52,7 +52,7 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
         name.addEventListener('input', () => {
             name.style.outline = 'none'
         })
-        document.querySelector('.offer-error-name').innerHTML = 'Неправильная форма'
+        document.querySelector('.offer-error-name').innerHTML = ''
     } else {
         document.querySelector('.offer-error-name').innerHTML = '&nbsp;'
         if (!contacts.value || !(phoneRegex.test(contacts.value) || emailRegex.test(contacts.value))) {
@@ -60,7 +60,7 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
             contacts.addEventListener('input', () => {
                 contacts.style.outline = 'none'
             })
-            document.querySelector('.offer-error-contacts').innerHTML = 'Неправильная форма'
+            document.querySelector('.offer-error-contacts').innerHTML = 'Некорректные данные'
         } else {
             document.querySelector('.offer-error-contacts').innerHTML = '&nbsp;'
             const data = {
@@ -77,6 +77,26 @@ document.querySelector('.contractor-input').addEventListener('submit', (e) => {
     e.preventDefault()
     document.querySelector('.contractor-input input[type="email"]').value = null
     handleEmail([])
+})
+
+document.querySelector('.contractor-input').addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const email = document.querySelector('#request-name')
+    const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+    
+    if (!email.value || !(emailRegex.test(email.value))) {
+        email.style.outline = "rgb(255, 77, 87) solid 2px"
+        email.addEventListener('input', () => {
+            email.style.outline = 'none'
+        })
+    } else {
+        const data = {
+            email: email.value,
+        }
+        document.querySelectorAll('.contractor-input input:not(input[type="submit"])').forEach((el) => { el.value = null })
+        handleEmail(data)
+    }
 })
 
 function handleEmail(data) {

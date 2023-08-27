@@ -106,6 +106,9 @@ document.querySelectorAll('.close-popup').forEach((el) => {
   el.addEventListener('click', () => {
     document.querySelector('.sendmail-popup-wrapper').classList.add('hidden')
     document.querySelector('.offer-request-wrapper').classList.add('hidden')
+    document.getElementById('request-offer').reset()
+    document.querySelector('#contacts-request').style.outline = 'none'
+    document.querySelector('.offer-error-contacts').innerHTML = ''
   })
 })
 

@@ -35,7 +35,7 @@
 						</div>
 						<ul class="menu-items">
 							<li>
-								<a class="menu-item" href="#about">О лендинге</a>
+								<a class="menu-item" href="#format">Форматы</a>
 							</li>
 							<li>
 								<a class="menu-item" href="#rate">Тарифы</a>
@@ -77,7 +77,7 @@
 				<div class="slide-menu">
 					<ul class="menu-items">
 						<li>
-							<a class="menu-item" href="#about">О лендинге</a>
+							<a class="menu-item" href="#format">Формат</a>
 						</li>
 						<li>
 							<a class="menu-item" href="#rate">Тарифы</a>
@@ -134,7 +134,7 @@
 					<a href="#form" class="banner-button button">Оставить заявку</a>
 				</div>
 			</section>
-			<section>
+			<section id="format">
 				<h2 class="section-title">что выбрать?</h2>
 				<div class="choise-cards">
 					<div class="choise-card">
@@ -142,7 +142,7 @@
 						<div class="card-img">
 							<img draggable="false" src="images/outsource.png">
 						</div>
-						<span class="card-text">Вариант, кому не хватает времени на разработку своего проекта, и для тех, кто не хочет, кто не хочет терять контроль над своим бизнесом. Подходит для тех, кто хочет опробовать новые идеи.</span>
+						<span class="card-text">Вариант, кому не хватает времени на разработку своего проекта, и для тех, кто не хочет терять контроль над своим бизнесом. Подходит для тех, кто хочет опробовать новые идеи.</span>
 					</div>
 					<div class="choise-card">
 						<span class="card-title">Аутстаффинг</span>
@@ -287,10 +287,11 @@
 					<h3 class="contractor-title">Экспресс-консультация</h3>
 					<h4 class="contractor-subtitle">Эксперт ответит на ваши вопросы. 30 минут обсуждения<br> по нужным вам направлениям бесплатно.</h4>
 					<form class="contractor-input">
-						<input required id="contractor-email" type="email" placeholder="Ваша почта">
+						<input id="contractor-email" name="email-contr" type="email" placeholder="Ваша почта">
+						<span class="contractor-error-email">&nbsp;</span>
 						<button id="contractor-submit">Отправить</button>
 					</form>
-					<span class="contractor-description">Нажимая на кнопку «Оформить»,<br>вы соглашаетесь с политикой обработки персональных данных.</span>
+					<span class="contractor-description">Нажимая на кнопку «Отправить»,<br>вы соглашаетесь с политикой обработки персональных данных.</span>
 				</div>
 			</section>
 			<section id="rate">
@@ -303,7 +304,7 @@
 						</div>
 						<span class="spec">Backend</span>
 						<div class="price">от 2500 ₽<span>/ час</span></div>
-						<p>Symfony, Laravel, Yii, Zend, Codeigniter, Cakephp, Golang, C#, Python, Git , Node.js, MySQL,  PostgreSQMongoDB, Rest, Docker</p>
+						<p>Symfony, Laravel, Yii, Zend, Codeigniter, CakePHP, Golang, C#, Python, Git , Node.js, MySQL, Postgre, SQMongoDB, Rest, Docker</p>
 					</div>
 					<div class="team-card">
 						<div class="team-card-title">
@@ -330,7 +331,7 @@
 						</div>
 						<span class="spec">Аналитики</span>
 						<div class="price">от 1000 ₽<span>/ час</span></div>
-						<p>Atlassian (Confluence, Jira), redmine, UML, BPMB: draw.io,  postman, soapUi, dataGrip, Balsamiqr</p>
+						<p>Atlassian (Confluence, Jira), Redmine, UML, BPMB: draw.io, Postman, SoapUi, DataGrip, Balsamiq</p>
 					</div>
 					<div class="team-card">
 						<div class="team-card-title">
@@ -348,7 +349,7 @@
 						</div>
 						<span class="spec">Тестировщики</span>
 						<div class="price">от 1000 ₽<span>/ час</span></div>
-						<p>Разрабатываем тесты на Selenium/Selenide, Тестирование API (soap/rest)</p>
+						<p>Разрабатываем тесты на Selenium/Selenide, Тестирование API (SOAP/REST)</p>
 					</div>
 				</div>
 			</section>
@@ -364,12 +365,12 @@
 							</div>
 							<div class="tab-content">
 								<div class="tab-img">
-									<img style="filter: sepia(1)" draggable="false" src="images/process1.png">
+									<img draggable="false" src="images/get_ready.jpg">
 								</div>
 							</div>
 							<div class="tab-content">
 								<div class="tab-img">
-									<img style="filter: grayscale(1)" draggable="false" src="images/process1.png">
+									<img draggable="false" src="images/dev.jpg">
 								</div>
 							</div>
 						</div>
@@ -384,25 +385,25 @@
 							</div>
 							<div class="tab-head" data-id="2">
 								<span class="tab-title">Разрабатываем</span>
-								<p>Приступаем к работе в проекте, аккаунт менеджера, предоставляем мгновенную связь и регулярные отчеты о статусах.</p>
+								<p>Приступаем к работе, обеспечиваем мгновенную обратную связь и регулярные отчеты о статусах.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<script>
-				// send email
-				// document.querySelector('.contractor-input').addEventListener('submit', (e) => {
-				//   e.preventDefault();
-				//   const email = document.querySelector('#contractor-email').value
-				//   options = {
-				//     method: "GET",
-				//     cors: "no-cors"
-				//   }
-				//   fetch('sendMail.php?email=' + email)
-				//     .then(data => emailSuccess(data))
-				// })
-			</script>
+			<!-- <script>
+				send email
+				document.querySelector('.contractor-input').addEventListener('submit', (e) => {
+				  e.preventDefault();
+				  const email = document.querySelector('#contractor-email').value
+				  options = {
+				    method: "GET",
+				    cors: "no-cors"
+				  }
+				  fetch('sendMail.php?email=' + email)
+				    .then(data => emailSuccess(data))
+				})
+			  </script> -->
 			<section class="marquee-wrapper wide">
 				<div class="marquee">
 					<div>
@@ -526,19 +527,17 @@
 				<form action="#" class="leave-request" id="leave-request-form">
 					<div class="toppings">
 						<input class="topi" type="checkbox" name="logo" id="t1">
-						<label class="topping" for="t1">Разработка логотипа</label>
+						<label class="topping" for="t1">Backend</label>
 						<input class="topi" type="checkbox" name="logo" id="t2">
-						<label class="topping" for="t2">Калькулятор</label>
+						<label class="topping" for="t2">Mobile</label>
 						<input class="topi" type="checkbox" name="logo" id="t3">
-						<label class="topping" for="t3">Квиз</label>
+						<label class="topping" for="t3">Frontend</label>
 						<input class="topi" type="checkbox" name="logo" id="t4">
-						<label class="topping" for="t4">Поддержка сайта</label>
+						<label class="topping" for="t4">Аналитики</label>
 						<input class="topi" type="checkbox" name="logo" id="t5">
-						<label class="topping" for="t5">Запуск рекламы Яндекс.Директ</label>
+						<label class="topping" for="t5">UX/UI Design</label>
 						<input class="topi" type="checkbox" name="logo" id="t6">
-						<label class="topping" for="t6">Настройка аналитики</label>
-						<input class="topi" type="checkbox" name="logo" id="t7">
-						<label class="topping" for="t7">Онлайн-чат</label>
+						<label class="topping" for="t6">Тестировщики</label>
 					</div>
 					<div class="main-part">
 						<textarea name="description" id="request-description" rows="3" placeholder="Напишите кратко о проекте"></textarea>
@@ -572,7 +571,7 @@
 					<div class="footer-row">
 						<div class="footer-side">
 							<span class="adress-desc">Офис в Москве</span>
-							<span class="adress">Переулок Кожевнический 4-й,<br>дом 2/12, г. Москва, 115114</span>
+							<span class="adress">г. Москва<br>2-й Кожевнический переулок, 12с10</span>
 						</div>
 						<div class="footer-side">
 							<a class="footer-number" href="tel:+7 (495) 532-72-71">+7 (495) 532-72-71</a>
@@ -623,7 +622,7 @@
 						<div class="request-offer-inputs">
 							<div class="left">
 								<input placeholder="Как вас зовут?" type="text" name="name" id="name-request">
-								<span class="offer-error-name">&nbsp;</span>
+								<span class="offer-error-name"></span>
 							</div>
 							<div class="right">
 								<input placeholder="Телефон или email" type="text" name="contacts" id="contacts-request">
