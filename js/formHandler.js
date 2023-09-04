@@ -14,33 +14,33 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
         filesize += file.size
     })
     const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-    const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const emailRegex = /[a-zA-Z0-9]+[@]+[a-zA-Z0-9]+[.]+[a-zA-Z]+/;
 
     const rules = [
         {
             rule:  description.value,
             error: () => {
-                description.style.outline = "rgb(255, 77, 87) solid 2px"
+                description.style.border = "rgb(255, 77, 87) solid 2px"
                 description.addEventListener('input', () => {
-                    description.style.outline = 'none';
+                    description.style.border = 'none';
                 })
             }
         },
         {
             rule:  name.value,
             error: () => {
-                name.style.outline = "rgb(255, 77, 87) solid 2px"
+                name.style.border = "rgb(255, 77, 87) solid 2px"
                 name.addEventListener('input', () => {
-                    name.style.outline = 'none';
+                    name.style.border = 'none';
                 })
             }
         },
         {
             rule:  contacts.value && (phoneRegex.test(contacts.value) || emailRegex.test(contacts.value)),
             error: () => {
-                contacts.style.outline = "rgb(255, 77, 87) solid 2px";
+                contacts.style.border = "rgb(255, 77, 87) solid 2px";
                 contacts.addEventListener('input', () => {
-                    contacts.style.outline = 'none';
+                    contacts.style.border = 'none';
                 })
             }
         },
@@ -60,7 +60,6 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
     
     let formValid = true
     for (let rule of rules) {
-        console.log(rule)
         if (!rule.rule) {
             rule.error()
             formValid = false
@@ -68,7 +67,8 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
     }
     
     if (formValid) {
-        document.querySelector('.selected-files').innerHTML = '<span class="file-hint">Прикрепить файлы</span><span class="file-hint-desc">Загружаемые файлы не должны превышать 20 мб</span>'
+        if (document.querySelector('.selected-files') !== null)
+            document.querySelector('.selected-files').innerHTML = '<span class="file-hint">Прикрепить файлы</span><span class="file-hint-desc">Загружаемые файлы не должны превышать 20 мб</span>'
         data = new FormData($('#leave-request-form')[0]);
         handleEmail(data)
         document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((el) => { 
@@ -94,9 +94,9 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
     } else {
         document.querySelector('.offer-error-name').innerHTML = '&nbsp;';
         if (!contacts.value || !(phoneRegex.test(contacts.value) || emailRegex.test(contacts.value))) {
-            contacts.style.outline = "rgb(255, 77, 87) solid 2px";
+            contacts.style.border = "rgb(255, 77, 87) solid 2px";
             contacts.addEventListener('input', () => {
-                contacts.style.outline = 'none';
+                contacts.style.border = 'none';
             })
             document.querySelector('.offer-error-contacts').innerHTML = 'Некорректные данные';
         } else {
@@ -120,20 +120,20 @@ document.querySelector('.contractor-input').addEventListener('submit', (e) => {
     
     if (!email.value || !(emailRegex.test(email.value))) {
         document.querySelector('.contractor-error-email').style.display = "block"
-        email.parentElement.style.outline = "rgb(255, 77, 87) solid 2px"
+        email.parentElement.style.border = "rgb(255, 77, 87) solid 2px"
         email.addEventListener('input', () => {
-            email.style.outline = 'none'
+            email.style.border = 'none'
         })
         email.addEventListener('input', () =>{
             document.querySelector('.contractor-error-email').style.display = "none"
-            email.parentElement.style.outline = "none"
+            email.parentElement.style.border = "none"
         })
     } else {
         const data = {
             email: email.value,
         }
         document.querySelector('.contractor-error-email').style.display = "none"
-        email.parentElement.style.outline = "none"
+        email.parentElement.style.border = "none"
         document.querySelectorAll('.contractor-input input:not(input[type="submit"])').forEach((el) => { el.value = null })
         handleEmail(data)
     }

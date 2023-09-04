@@ -396,7 +396,7 @@ swiper-container {
   text-align: center;
   padding: 20px;
   border-radius: var(--small-radius);
-  margin: 36px 0 0;
+  margin-top: auto;
   font-size: 20px;
   cursor: pointer;
 }
