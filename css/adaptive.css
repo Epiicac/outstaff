@@ -469,6 +469,13 @@
     width: fit-content;
     padding: 24px;
   }
+
+  .marquee {
+    animation: marquee linear infinite 10s;
+  }
+  .marquee {
+    width: 400%;
+  }
   
   .team-card {
     width: 100%;
@@ -601,6 +608,19 @@
   }
   .request-offer-inputs .left, .request-offer-inputs .right {
     width: 100%;
+  }
+
+  .left {
+    width: 100%;
+  }
+  .not-found {
+    align-items: center;
+    width: 100%;
+  }
+  .not-found .button {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
   }
 }
 

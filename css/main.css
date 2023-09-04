@@ -101,7 +101,7 @@ input[type="file"] {
   border-radius: 18px;
 }
 .main-nav.mobile .menu-item:after {
-  content: url('/images/arr_right.svg');
+  content: url('../images/arr_right.svg');
   display: block;
   margin-left: auto;
   height: 24px;
@@ -173,7 +173,7 @@ input[type="file"] {
 
 .banner-button {
   border-radius: var(--small-radius);
-  display: ruby-base;
+  display: block;
 }
 .banner {
   background-image: url("../images/banner.webp");
@@ -576,7 +576,7 @@ swiper-container {
   position: relative;
   font-family: "Roboto Flex";
   font-variation-settings: "opsz" 72, "GRAD" 150, "slnt" 0, "XTRA" 556, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 528, "YTAS" 750, "YTDE" -203, "YTFI" 738;
-  width: 230%;
+  width: 200%;
   display: flex;
 }
 .marquee div {

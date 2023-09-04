@@ -1,8 +1,5 @@
 swiperEl = document.querySelector('.slider-banner-content')
 
-
-
-
 advantEl = document.querySelector('.advant-slider')
 
 const paramsAdvant = {
