@@ -1,3 +1,8 @@
+@media screen and (min-width: 1280px) and (max-width: 1550px) {
+  .marquee {
+    width: 300%;
+  }
+}
 @media screen and (min-width: 1440px) {
   .advant-slider {
     margin-right: calc(-1 * (100vw - 1440px + (var(--wrapper-padding) * 2)) / 2) !important;
