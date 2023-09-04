@@ -44,10 +44,28 @@ function toggleAccordeon(el) {
 }
 
 function updateFiles() {
+  fileArray = document.querySelector('#file').files
   filelist = '<div class="selected-files">'
-  Array.from(document.querySelector('#file').files).forEach((file, index) => {
-    filename = file.name > 21 ? file.name.substr(0, 21) : file.name
-    filelist += `<span class="selected-file">${filename}<img class="remove-file" data-id="${index}" src="./images/filecross.svg"></span>`
+  document.querySelector('.count-error').style.display = 'none'
+  document.querySelector('.size-error').style.display = 'none'
+  fileSizeLimit = 20971520
+  cumulativeFileSize = 0
+  Array.from(fileArray).forEach((file, index) => {
+    cumulativeFileSize += file.size
+    filename = file.name.length > 21 ? file.name.substr(0, 21) + '...' : file.name
+    if (cumulativeFileSize > fileSizeLimit) {
+      if (file.size > fileSizeLimit) {
+        filelist += `<span class="selected-file error">${filename}<img class="remove-file" data-id="${index}" src="./images/filecross.svg"></span>`
+      } else {
+        filelist += `<span class="selected-file">${filename}<img class="remove-file" data-id="${index}" src="./images/filecross.svg"></span>`
+      }
+      fileSizeError()
+    } else {
+      filelist += `<span class="selected-file">${filename}<img class="remove-file" data-id="${index}" src="./images/filecross.svg"></span>`
+    }
+    if (index > 9) {
+      fileLimitError()
+    }
   })
   document.querySelector('.file-desc').innerHTML = filelist + '</div>'
   
@@ -55,8 +73,40 @@ function updateFiles() {
     el.addEventListener('click', (e) => {
       e.preventDefault()
       removeFileFromFileList(Number(el.getAttribute('data-id')))
+      el.parentElement.remove();
     })
   })
+
+  var select_null = document.querySelector('.selected-files')
+  if (select_null.innerHTML == '') {
+    select_null.style.height = "auto"
+    select_null.style.padding = "0px"
+    select_null.style.overflow = "auto"
+    select_null.innerHTML = '<span class="file-hint">Прикрепить файлы</span><span class="file-hint-desc">Загружаемые файлы не должны превышать 20 мб</span>'
+  }
+}
+
+
+function removeFileFromFileList(index) {
+  const dt = new DataTransfer()
+  const input = document.querySelector('#file')
+  const { files } = input
+  
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i]
+    if (index !== i)
+      dt.items.add(file)
+  }
+  
+  updateFiles()
+  input.files = dt.files
+}
+
+function fileLimitError() {
+  document.querySelector('.count-error').style.display = 'block'
+}
+function fileSizeError() {
+  document.querySelector('.size-error').style.display = 'block'
 }
 
 document.querySelector('#file').addEventListener('change', updateFiles)
@@ -85,22 +135,6 @@ document.querySelector('.slide-menu-wrapper .header-button').addEventListener('c
   document.querySelector('.slide-menu-wrapper').classList.toggle('active')
   document.querySelector('.menu-trigger img').setAttribute('src', 'images/burger.svg')
 })
-
-
-function removeFileFromFileList(index) {
-  const dt = new DataTransfer()
-  const input = document.querySelector('#file')
-  const { files } = input
-  
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i]
-    if (index !== i)
-      dt.items.add(file)
-  }
-  
-  updateFiles()
-  input.files = dt.files
-}
 
 document.querySelectorAll('.close-popup').forEach((el) => {
   el.addEventListener('click', () => {

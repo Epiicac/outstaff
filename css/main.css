@@ -217,6 +217,7 @@ input[type="file"] {
   font-size: var(---normal-size);
   font-family: "TT Norms Pro";
   margin-bottom: 100px;
+  line-height: 140%;
 }
 
 .choise-cards {
@@ -245,7 +246,7 @@ input[type="file"] {
 }
 .choise-card .card-text {
   font-size: var(--normal-size);
-  font-weight: 500;
+  line-height: 140%;
 }
 
 .advant-controls {
@@ -270,7 +271,7 @@ input[type="file"] {
   border-radius: var(--medium-radius);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   transition: .2s;
 }
 .advant-card:hover {
@@ -330,7 +331,9 @@ swiper-container {
   color: var(--text-accent-color);
   font-weight: 500;
 }
-
+.work-card span:not(.h3) {
+  line-height: 140%;
+}
 .outsource-title {
   display: flex;
   justify-content: space-between;
@@ -371,6 +374,7 @@ swiper-container {
   flex-wrap: wrap;
   gap: 18px 48px;
   font-weight: 500;
+  margin-bottom: 48px;
 }
 .outsource-list li {
   display: flex;
@@ -450,6 +454,11 @@ swiper-container {
 }
 #contractor-email {
   padding-left: 12px;
+}
+.contractor-error-email {
+  display: none;
+  color: rgb(255, 77, 87);
+  margin-bottom: 12px;
 }
 
 .team {
@@ -747,15 +756,33 @@ swiper-container {
   padding: 20px 28px;
   font-size: var(--normal-size);
   font-weight: 500;
+  width: 100%;
+  box-sizing: border-box;
 }
 #send-form {
   background-color: var(--main-color);
   color: var(--text-accent-color);
   cursor: pointer;
+  height: fit-content;
 }
 .add-file {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
+}
+.file-wrapper {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+.file-error {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.file-error span {
+  display: none;
+  color: #FF4D57;
 }
 .file-icon img {
   padding: 20px;
@@ -816,6 +843,14 @@ swiper-container {
 .file-hint {
   color: var(--text-accent-color);
   font-size: var(--accent3-size);
+}
+.main-part .form-error {
+  display: none;
+  margin-top: 10px;
+}
+.main-part .form-error span {
+  color: rgb(255, 77, 87);
+  font-size: var(--normal-size);
 }
 
 .first-part {

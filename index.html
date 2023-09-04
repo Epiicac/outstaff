@@ -288,9 +288,9 @@
 					<h4 class="contractor-subtitle">Эксперт ответит на ваши вопросы. 30 минут обсуждения<br> по нужным вам направлениям бесплатно.</h4>
 					<form class="contractor-input">
 						<input id="contractor-email" name="email-contr" type="email" placeholder="Ваша почта">
-						<span class="contractor-error-email">&nbsp;</span>
 						<button id="contractor-submit">Отправить</button>
 					</form>
+					<span class="contractor-error-email">Некорректные данные</span>
 					<span class="contractor-description">Нажимая на кнопку «Отправить»,<br>вы соглашаетесь с политикой обработки персональных данных.</span>
 				</div>
 			</section>
@@ -540,19 +540,34 @@
 						<label class="topping" for="t6">Тестировщики</label>
 					</div>
 					<div class="main-part">
-						<textarea name="description" id="request-description" rows="3" placeholder="Напишите кратко о проекте"></textarea>
+						<div class="form-textarea">
+							<textarea name="description" id="request-description" rows="3" placeholder="Напишите кратко о проекте"></textarea>
+							<div class="form-error"><span>Некорректные данные</span></div>
+						</div>
 						<input type="file" name="additional-file" id="file" multiple>
 						<label class="add-file" for="file">
-							<div class="file-icon">
+							<div class="file-wrapper">
+							  <div class="file-icon">
 								<img draggable="false" src="images/clip.svg" alt="8">
-							</div>
-							<div class="file-desc">
+							  </div>
+							  <div class="file-desc">
 								<span class="file-hint">Прикрепить файлы</span>
 								<span class="file-hint-desc">Загружаемые файлы не должны превышать 20 мб</span>
+							  </div>
 							</div>
-						</label>
-						<input type="text" name="name" id="request-name" placeholder="Как вас зовут?">
-						<input type="text" name="email-or-phone" id="contacts" placeholder="E-mail или телефон">
+							<div class="file-error">
+							  <span class="size-error">Превышен вес файлов</span>
+							  <span class="count-error">Превышено количество файлов</span>
+							</div>
+						  </label>
+						<div class="form-input">
+							<input type="text" name="name" id="request-name" placeholder="Как вас зовут?">
+							<div class="form-error"><span>Некорректные данные</span></div>
+						</div>
+						<div class="form-input">
+							<input type="text" name="email-or-phone" id="contacts" placeholder="E-mail или телефон">
+							<div class="form-error"><span>Некорректные данные</span></div>
+						</div>
 						<input class="button" id="send-form" type="submit" value="Обсудить проект">
 					</div>
 				</form>
