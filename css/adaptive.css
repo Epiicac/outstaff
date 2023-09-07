@@ -580,7 +580,7 @@
 
   .work-card .card-icon img {
     width: 36px;
-    width: 36px;
+    height: 36px;
   }
 
   .outsource-n, .outsource-l {
@@ -598,9 +598,6 @@
     margin: 0 0 3px;
   }
 
-  .process .tab-img img {
-    border-radius: 24px;
-  }
   .process .tab-head {
     border-radius: 24px;
   }
