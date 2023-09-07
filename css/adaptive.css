@@ -678,6 +678,7 @@
   .accordeon-question {
     padding: 24px;
     background-color: var(--card-bg-color);
+    font-size: 18px;
   }
   .accordeon-subject-text {
     padding: 0 24px 24px;
