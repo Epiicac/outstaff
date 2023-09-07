@@ -134,6 +134,33 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
     }
 })
 
+document.querySelector('.contractor-input').addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const email = document.querySelector('#contractor-email')
+    const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+
+    if (!email.value || !(emailRegex.test(email.value))) {
+        document.querySelector('.contractor-error-email').style.display = "block"
+        email.parentElement.style.outline = "rgb(255, 77, 87) solid 2px"
+        email.addEventListener('input', () => {
+            email.style.outline = 'none'
+        })
+        email.addEventListener('input', () =>{
+            document.querySelector('.contractor-error-email').style.display = "none"
+            email.parentElement.style.outline = "none"
+        })
+    } else {
+        const data = {
+            email: email.value,
+        }
+        document.querySelector('.contractor-error-email').style.display = "none"
+        email.parentElement.style.outline = "none"
+        document.querySelectorAll('.contractor-input input:not(input[type="submit"])').forEach((el) => { el.value = null })
+        handleEmail(data)
+    }
+})
+
 function notDuplicate(fl, f) {
     for (let el of fl) {
         if (f.name === el.name)

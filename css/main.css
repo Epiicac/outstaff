@@ -840,6 +840,9 @@ swiper-container {
   align-items: center;
   background-color: #232323;
 }
+.selected-file.error {
+  border: 1px solid #FF4D57;
+}
 .selected-file img {
   margin-left: auto;
 }
