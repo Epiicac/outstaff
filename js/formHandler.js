@@ -20,9 +20,9 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
         {
             rule:  description.value,
             error: () => {
-                description.style.outline = "rgb(255, 77, 87) solid 2px"
+                description.style.border = "rgb(255, 77, 87) solid 2px"
                 description.addEventListener('input', () => {
-                    description.style.outline = 'none';
+                    description.style.border = 'none';
                 })
                 description.parentElement.children[1].style.display = "block"
             }
@@ -30,9 +30,9 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
         {
             rule:  name.value,
             error: () => {
-                name.style.outline = "rgb(255, 77, 87) solid 2px"
+                name.style.border = "rgb(255, 77, 87) solid 2px"
                 name.addEventListener('input', () => {
-                    name.style.outline = 'none';
+                    name.style.border = 'none';
                 })
                 name.parentElement.children[1].style.display = "block"
             }
@@ -40,9 +40,9 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
         {
             rule:  contacts.value && (phoneRegex.test(contacts.value) || emailRegex.test(contacts.value)),
             error: () => {
-                contacts.style.outline = "rgb(255, 77, 87) solid 2px";
+                contacts.style.border = "rgb(255, 77, 87) solid 2px";
                 contacts.addEventListener('input', () => {
-                    contacts.style.outline = 'none';
+                    contacts.style.border = 'none';
                 })
                 contacts.parentElement.children[1].style.display = "block"
             }
@@ -142,20 +142,20 @@ document.querySelector('.contractor-input').addEventListener('submit', (e) => {
 
     if (!email.value || !(emailRegex.test(email.value))) {
         document.querySelector('.contractor-error-email').style.display = "block"
-        email.parentElement.style.outline = "rgb(255, 77, 87) solid 2px"
+        email.parentElement.style.border = "rgb(255, 77, 87) solid 2px"
         email.addEventListener('input', () => {
-            email.style.outline = 'none'
+            email.style.border = 'none'
         })
         email.addEventListener('input', () =>{
             document.querySelector('.contractor-error-email').style.display = "none"
-            email.parentElement.style.outline = "none"
+            email.parentElement.style.border = "none"
         })
     } else {
         const data = {
             email: email.value,
         }
         document.querySelector('.contractor-error-email').style.display = "none"
-        email.parentElement.style.outline = "none"
+        email.parentElement.style.border = "none"
         document.querySelectorAll('.contractor-input input:not(input[type="submit"])').forEach((el) => { el.value = null })
         handleEmail(data)
     }
