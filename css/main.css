@@ -474,6 +474,9 @@ swiper-container {
   width: calc((100% / 3) - 96px);
   background-color: var(--card-bg-color);
 }
+.team-card p {
+  line-height: 140%;
+}
 .team-card-title {
   display: flex;
   flex-wrap: wrap;
@@ -550,6 +553,7 @@ swiper-container {
 }
 .process .tab-head p {
   pointer-events: none;
+  line-height: 140%;
 }
 .process .tab-content:not(.active) {
   display: none;
@@ -660,6 +664,9 @@ swiper-container {
   transition: .3s;
   margin-bottom: 10px;
 }
+.accordeon-body.active {
+  background-color: var(--card-bg-color);
+}
 .accordeon-body:hover {
   background-color: var(--card-bg-color) !important;
 }
@@ -726,6 +733,7 @@ swiper-container {
   user-select: none;
   cursor: pointer;
   transition: .3s;
+  font-family: "TT Norms Pro";
 }
 .topi:checked + .topping {
   background-color: var(--main-color);
@@ -910,6 +918,9 @@ swiper-container {
 .afterparty-side {
   display: flex;
   gap: 24px;
+}
+.afterparty-side:nth-child(4) {
+  display: none
 }
 .afterparty-side span {
   color: var(--text-accent-color);

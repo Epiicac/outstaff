@@ -355,6 +355,10 @@
     order: 1;
   }
   .afterparty .afterparty-side:nth-child(3) {
+    order: 4
+  }
+  .afterparty-side:nth-child(4) {
+    display: block;
     order: 3
   }
   .afterparty .afterparty-side {
