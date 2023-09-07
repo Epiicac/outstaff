@@ -140,6 +140,9 @@ document.querySelectorAll('.close-popup').forEach((el) => {
     document.getElementById('request-offer').reset()
     document.querySelector('#contacts-request').style.outline = 'none'
     document.querySelector('.offer-error-contacts').innerHTML = ''
+    document.querySelectorAll('.offer-error-contacts').forEach((it) => { it.innerHTML = '&nbsp'})
+    document.querySelectorAll('.offer-error-name').forEach((it) => { it.innerHTML = '&nbsp'})
+    document.querySelectorAll('input').forEach((it) => { it.classList.remove('error') })
   })
 })
 

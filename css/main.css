@@ -937,6 +937,9 @@ swiper-container {
   line-height: 140%;
 }
 
+form input.error {
+  border: 2px solid #FF4D57 !important
+}
 .sendmail-popup-wrapper,
 .offer-request-wrapper {
   width: calc(100vw - 24px);
