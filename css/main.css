@@ -174,6 +174,7 @@ input[type="file"] {
 .banner-button {
   border-radius: var(--small-radius);
   display: block;
+  font-size: 20px;
 }
 .banner {
   background-image: url("../images/banner.webp");
@@ -392,7 +393,7 @@ swiper-container {
 }
 .outsource-list li:before {
   content: url("../images/benefits.svg");
-  height: 20px;
+  height: 25px;
   margin-right: 10px;
 }
 .outsource-button {
@@ -765,7 +766,7 @@ swiper-container {
   outline: none;
   color: var(--text-main-color);
   padding: 20px 28px;
-  font-size: var(--normal-size);
+  font-size: 20px;
   font-weight: 500;
   width: 100%;
   box-sizing: border-box;
@@ -775,6 +776,7 @@ swiper-container {
   color: var(--text-accent-color);
   cursor: pointer;
   height: fit-content;
+  font-size: 20px;
 }
 .add-file {
   display: flex;
@@ -1039,6 +1041,10 @@ form input.error {
 }
 .request-offer-inputs input[type="text"] {
   background-color: #232323;
+  margin-bottom: -40px;
+}
+.request-offer-inputs input[type="text"].error {
+  margin-bottom: 0px;
 }
 .request-offer-inputs .left,
 .request-offer-inputs .right {

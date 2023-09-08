@@ -40,6 +40,34 @@ function toggleAccordeon(el) {
   }
 }
 
+var files = []
+document.addEventListener('DOMContentLoaded', () => {
+    $('#file').on('change', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        for (let file of event.target.files) {
+            if (notDuplicate(files, file)) {
+                files.push(file)
+            }
+        }
+        data = new DataTransfer()
+        for (let file of files) {
+            data.items.add(file)
+        }
+        event.target.files = data.files
+        updateFiles()
+    });
+})
+function removeFileFromFileList(index) {
+    files.splice(index, 1)
+    data = new DataTransfer()
+    for (let file of files) {
+        data.items.add(file)
+    }
+    document.getElementById('file').files = data.files
+    updateFiles()
+}
+ 
 function updateFiles() {
   fileArray = document.querySelector('#file').files
   filelist = '<div class="selected-files">'
@@ -70,7 +98,7 @@ function updateFiles() {
     el.addEventListener('click', (e) => {
       e.preventDefault()
       removeFileFromFileList(Number(el.getAttribute('data-id')))
-      el.parentElement.remove();
+      updateFiles()
     })
   })
 
@@ -81,24 +109,6 @@ function updateFiles() {
     select_null.style.overflow = "auto"
     select_null.innerHTML = '<span class="file-hint">Прикрепить файлы</span><span class="file-hint-desc">Загружаемые файлы не должны превышать 20 мб</span>'
   }
-}
-
-
-
-
-function removeFileFromFileList(index) {
-  const dt = new DataTransfer()
-  const input = document.querySelector('#file')
-  const { files } = input
-  
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i]
-    if (index !== i)
-      dt.items.add(file)
-  }
-  
-  updateFiles()
-  input.files = dt.files
 }
 
 function fileLimitError() {
