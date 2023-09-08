@@ -84,6 +84,8 @@ function updateFiles() {
 }
 
 
+
+
 function removeFileFromFileList(index) {
   const dt = new DataTransfer()
   const input = document.querySelector('#file')
