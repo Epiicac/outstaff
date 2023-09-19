@@ -542,7 +542,7 @@
 @media screen and (max-width: 582px) {
   #first-slide {
     display: flex;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 170px);
   }
   .banner {
     padding: 0px 16px 24px;
@@ -646,6 +646,10 @@
 }
 
 @media screen and (max-width: 484px) {
+  #first-slide {
+    padding-top: 90px;
+    height: calc(100vh - 130px);
+  }
   .main-nav {
     height: 72px;
   }
