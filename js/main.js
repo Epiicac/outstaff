@@ -178,3 +178,23 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('resize', function(event) {
+    let arrNav = document.querySelector('#prevAdvant');
+    if (arrNav.classList.contains('swiper-button-lock')) {
+      arrNav.nextElementSibling.style.display = "none";
+    } else {
+      arrNav.nextElementSibling.style.display = "block";
+    }
+  }, true)
+})
+
+document.querySelectorAll('.outsource-button').forEach((el) => {
+  el.addEventListener('click', () => {
+    document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((el) => { 
+      el.value = null;
+      el.checked = false;
+  })
+  })
+})

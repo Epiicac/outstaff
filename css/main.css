@@ -38,7 +38,7 @@ section {
   padding-top: var(--block-padding);
   margin: 0 auto;
 }
-span, p, input, li, input::placeholder {
+span, p, input, li, input::placeholder, textarea::placeholder {
   color: var(--text-main-color);
   font-family: "TT Norms Pro";
   font-weight: 500;
@@ -277,9 +277,6 @@ input[type="file"] {
   justify-content: flex-start;
   transition: .2s;
 }
-.advant-card:hover {
-  background-color: var(--main-color);
-}
 .advant-card h3 {
   font-size: 24px;
   margin-bottom: 36px;
@@ -289,9 +286,6 @@ input[type="file"] {
   font-size: var(--normal-size);
   line-height: 140%;
   transition: .2s;
-}
-.advant-card:hover span {
-  color: var(--text-accent-color);
 }
 swiper-container {
   margin-right: calc(-1 * var(--wrapper-padding)) !important;
@@ -393,7 +387,7 @@ swiper-container {
 }
 .outsource-list li:before {
   content: url("../images/benefits.svg");
-  height: 25px;
+  height: 20px;
   margin-right: 10px;
 }
 .outsource-button {
@@ -571,13 +565,19 @@ swiper-container {
 }
 .process .tab-img {
   margin: 0 auto;
-  width: fit-content;
+  width: 100%;
+  position: relative;
+  padding-top: 100%;
 }
 .process .tab-img img {
+  position: absolute;
   display: block;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 24px;
+  top: 0px;
+  left: 0px;
 }
 
 .marquee {
@@ -686,9 +686,10 @@ swiper-container {
   width: 15px;
   height: 9px;
   transition: .3s;
+  rotate: 180deg;
 }
 .accordeon-body.active .accordeon-question img {
-  rotate: 180deg;
+  rotate: 0deg;
 }
 .accordeon-question {
   position: relative;
@@ -718,7 +719,7 @@ swiper-container {
   margin-bottom: 12px;
 }
 .not-found-desc {
-  color: var(--text-accent-color);
+  color: var(--text-accent-color) !important;
 }
 .toppings {
   display: flex;
@@ -984,7 +985,6 @@ form input.error {
 }
 .popup-contents {
   width: 100%;
-  transform: translateY(-40px);
   height: 100%;
   display: flex;
   justify-content: center;

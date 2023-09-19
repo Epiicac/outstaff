@@ -23,6 +23,7 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
                 description.style.border = "rgb(255, 77, 87) solid 2px"
                 description.addEventListener('input', () => {
                     description.style.border = 'none';
+                    description.parentElement.children[1].style.display = "none"
                 })
                 description.parentElement.children[1].style.display = "block"
             }
@@ -33,6 +34,7 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
                 name.style.border = "rgb(255, 77, 87) solid 2px"
                 name.addEventListener('input', () => {
                     name.style.border = 'none';
+                    name.parentElement.children[1].style.display = "none"
                 })
                 name.parentElement.children[1].style.display = "block"
             }
@@ -43,6 +45,7 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
                 contacts.style.border = "rgb(255, 77, 87) solid 2px";
                 contacts.addEventListener('input', () => {
                     contacts.style.border = 'none';
+                    contacts.parentElement.children[1].style.display = "none"
                 })
                 contacts.parentElement.children[1].style.display = "block"
             }
@@ -74,6 +77,7 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
             document.querySelector('.selected-files').innerHTML = '<span class="file-hint">Прикрепить файлы</span><span class="file-hint-desc">Загружаемые файлы не должны превышать 20 мб</span>'
         data = new FormData($('#leave-request-form')[0]);
         handleEmail(data)
+        
         document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((el) => { 
             el.value = null;
             el.checked = false;
@@ -167,4 +171,24 @@ function notDuplicate(fl, f) {
             return false
     }
     return true
+}
+
+function handleEmail(data) {
+    document.querySelector('.sendmail-popup-wrapper').classList.toggle('hidden')
+    data.append('link', location.href);
+    $.ajax({
+        url: 'ajax/sendForm.php',
+        type: 'POST',
+        dataType: 'json',
+        data: data,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(response) {
+            console.log(response)
+        }
+    })
+    
 }

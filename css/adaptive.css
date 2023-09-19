@@ -125,10 +125,12 @@
     margin-bottom: 30px;
   }
   .not-found {
-    margin-top: auto;
+    position: sticky;
+    bottom: 5px;
   }
   .questions-wrapper .left {
     display: flex;
+    align-items: flex-end;
   }
 
   .leave-request {
@@ -526,6 +528,9 @@
     }
   }
 
+  .sendmail-popup .offer-request-title {
+    margin-top: 40px;
+  }
   .popup-title {
     font-size: 24px;
   }
@@ -535,10 +540,16 @@
 }
 
 @media screen and (max-width: 582px) {
+  #first-slide {
+    display: flex;
+    height: calc(100vh - 150px);
+  }
   .banner {
     padding: 0px 16px 24px;
     background-image: url(../images/mobile-banner.png);
     position: relative;
+    justify-content: center;
+    width: 100%;
   }
   .banner::before {
     content: url(../images/mobilebg-el.png);
@@ -623,6 +634,9 @@
   .not-found {
     align-items: center;
     width: 100%;
+  }
+  .not-found-title {
+    margin-bottom: 20px;
   }
   .not-found .button {
     width: 100%;
