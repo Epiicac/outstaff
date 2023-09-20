@@ -195,6 +195,18 @@ document.querySelectorAll('.outsource-button').forEach((el) => {
     document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((el) => { 
       el.value = null;
       el.checked = false;
-  })
+    })
+    for (let file of document.getElementById('file').files) {
+      if (notDuplicate(files, file)) {
+          files.push(file)
+      }
+    }
+    dt = new DataTransfer()
+    for (let file of files) {
+        dt.items.add(file)
+    }
+    document.getElementById('file').files = dt.files;
+    document.getElementById('file').value = null;
+    updateFiles();
   })
 })

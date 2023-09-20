@@ -8,5 +8,5 @@
         'success_send_to_email' => false
     ];
     require_once __DIR__ . '/sendRequestToCrm.php';
-    require_once __DIR__ . '/sendRequestToEmail.php';
+    // require_once __DIR__ . '/sendRequestToEmail.php';
     echo json_encode($resultSend);
