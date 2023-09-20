@@ -4,13 +4,13 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
     const description = document.querySelector('#request-description');
     const name = document.querySelector('#request-name');
     const contacts = document.querySelector('#contacts');
-    const files = document.querySelector('#file').files;
+    const changeFiles = document.querySelector('#file').files;
     let count = 0
-    if (files.length > 0) {
-        count = files.length
+    if (changeFiles.length > 0) {
+        count = changeFiles.length
     }
     filesize = 0;
-    Array.from(files).forEach((file)=> {
+    Array.from(changeFiles).forEach((file)=> {
         filesize += file.size
     })
     const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
@@ -82,6 +82,8 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
             el.value = null;
             el.checked = false;
         })
+        files = [];
+
     }
 })
 document.querySelector('#request-offer').addEventListener('submit', (e) => {

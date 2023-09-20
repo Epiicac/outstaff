@@ -45,11 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
     $('#file').on('change', function (event) {
         event.preventDefault();
         event.stopPropagation();
-        for (let file of event.target.files) {
-            if (notDuplicate(files, file)) {
-                files.push(file)
-            }
-        }
+        console.log(files)
+          for (let file of event.target.files) {
+              if (notDuplicate(files, file)) {
+                  files.push(file)
+              }
+          }
+        
         data = new DataTransfer()
         for (let file of files) {
             data.items.add(file)
@@ -58,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateFiles()
     });
 })
+
 function removeFileFromFileList(index) {
     files.splice(index, 1)
     data = new DataTransfer()
