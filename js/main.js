@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     $('#file').on('change', function (event) {
         event.preventDefault();
         event.stopPropagation();
-        console.log(files)
           for (let file of event.target.files) {
               if (notDuplicate(files, file)) {
                   files.push(file)
@@ -195,21 +194,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelectorAll('.outsource-button').forEach((el) => {
   el.addEventListener('click', () => {
-    document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((el) => { 
-      el.value = null;
-      el.checked = false;
-    })
-    for (let file of document.getElementById('file').files) {
-      if (notDuplicate(files, file)) {
-          files.push(file)
+    document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((item) => {
+      item.value = '';
+      item.style.border = "none"
+      if (item.parentElement.children[1].classList.contains('form-error')) {
+        item.parentElement.children[1].style.display = "none"
       }
+    })
+    if (document.querySelector('.contractor-input').classList.contains('error')) {
+      document.querySelector('.contractor-input').classList.remove('error')
+      document.querySelector('.contractor-input').nextElementSibling.style.display = "none"
     }
-    dt = new DataTransfer()
-    for (let file of files) {
-        dt.items.add(file)
-    }
-    document.getElementById('file').files = dt.files;
-    document.getElementById('file').value = null;
+    files = [];
     updateFiles();
   })
 })

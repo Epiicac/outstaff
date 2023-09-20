@@ -420,6 +420,9 @@ swiper-container {
   display: flex;
   margin: 36px 0;
 }
+.contractor-input.error {
+  border: 2px solid rgb(255, 77, 87);
+}
 .contractor-input input {
   flex: 1 0 0;
   font-size: var(--normal-size);
@@ -642,10 +645,13 @@ swiper-container {
   font-size: var(--accent3-size);
   color: var(--text-accent-color);
 }
+.client-link {
+  text-decoration-line: underline;
+}
 .client-review {
   color: var(--text-accent-color);
   line-height: 180%;
-  font-size: var(--normal-size);
+  font-size: 18px;
   margin: 40px 0 36px 0;
 }
 .client-real-name {
@@ -926,7 +932,7 @@ swiper-container {
 }
 .afterparty-side {
   display: flex;
-  gap: 24px;
+  gap: 16px;
 }
 .afterparty-side:nth-child(4) {
   display: none

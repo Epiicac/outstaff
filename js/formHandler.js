@@ -143,18 +143,19 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
 document.querySelector('.contractor-input').addEventListener('submit', (e) => {
     e.preventDefault()
 
+    const conForm = document.querySelector('.contractor-input');
     const email = document.querySelector('#contractor-email')
     const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
     if (!email.value || !(emailRegex.test(email.value))) {
+        conForm.classList.add('error');
         document.querySelector('.contractor-error-email').style.display = "block"
-        email.parentElement.style.border = "rgb(255, 77, 87) solid 2px"
         email.addEventListener('input', () => {
             email.style.border = 'none'
+            conForm.classList.remove('error');
         })
         email.addEventListener('input', () =>{
             document.querySelector('.contractor-error-email').style.display = "none"
-            email.parentElement.style.border = "none"
         })
     } else {
         const data = {
