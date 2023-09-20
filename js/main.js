@@ -196,6 +196,7 @@ document.querySelectorAll('.outsource-button').forEach((el) => {
   el.addEventListener('click', () => {
     document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((item) => {
       item.value = '';
+      item.checked = false;
       item.style.border = "none"
       if (item.parentElement.children[1].classList.contains('form-error')) {
         item.parentElement.children[1].style.display = "none"
