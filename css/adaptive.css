@@ -126,7 +126,7 @@
   }
   .not-found {
     position: sticky;
-    bottom: 5px;
+    bottom: 100px;
   }
   .questions-wrapper .left {
     display: flex;
