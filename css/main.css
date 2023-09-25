@@ -403,14 +403,16 @@ swiper-container {
   background-image: url('../images/contractor.png');
   background-color: var(--card-bg-color);
   background-position: bottom right;
-  background-size: unset;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: var(--medium-radius);
+  padding: 64px;
 }
 .contractor-subtitle {
   font-size: var(--normal-size);
   font-weight: 500;
   font-family: "TT Norms Pro";
+  margin-top: 12px;
 }
 .contractor-input {
   width: 50%;
@@ -453,10 +455,10 @@ swiper-container {
   font-family: "TT Norms Pro";
   line-height: 140%;
 }
-#contractor-email {
+.contractor-input input {
   padding-left: 12px;
 }
-.contractor-error-email {
+.contractor-error-phone {
   display: none;
   color: rgb(255, 77, 87);
   margin-bottom: 12px;

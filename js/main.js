@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelectorAll('.outsource-button').forEach((el) => {
   el.addEventListener('click', () => {
-    document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((item) => {
+    document.querySelectorAll('input:not(#contractor-phone, input[type="submit"]), textarea').forEach((item) => {
       item.value = '';
       item.checked = false;
       item.style.border = "none"
@@ -204,9 +204,36 @@ document.querySelectorAll('.outsource-button').forEach((el) => {
     })
     if (document.querySelector('.contractor-input').classList.contains('error')) {
       document.querySelector('.contractor-input').classList.remove('error')
-      document.querySelector('.contractor-input').nextElementSibling.style.display = "none"
     }
+    if (document.getElementById('contractor-phone')) {
+      document.getElementById('contractor-phone').classList.remove('error');
+    }
+    document.querySelector('.contractor-input').nextElementSibling.style.display = "none"
     files = [];
     updateFiles();
   })
 })
+
+var input_cont = document.getElementById('contractor-phone');
+var form_cont = document.querySelector('.contractor-input')
+window.addEventListener('resize', function(event) {
+  if (document.documentElement.clientWidth < 768) {
+    if (form_cont.classList.contains('error-validate')) {
+      form_cont.classList.remove('error-validate')
+      input_cont.classList.add('error-validate')
+    }
+    if (form_cont.classList.contains('error')) {
+      form_cont.classList.remove('error')
+      input_cont.classList.add('error')
+    }
+  } else {
+    if (input_cont.classList.contains('error-validate')) {
+      input_cont.classList.remove('error-validate')
+      form_cont.classList.add('error-validate')
+    }
+    if (input_cont.classList.contains('error')) {
+      input_cont.classList.remove('error')
+      form_cont.classList.add('error')
+    }
+  }
+}, true)

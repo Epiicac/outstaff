@@ -78,7 +78,7 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
         data = new FormData($('#leave-request-form')[0]);
         handleEmail(data)
         
-        document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((el) => { 
+        document.querySelectorAll('input:not(#contractor-phone, input[type="submit"]), textarea').forEach((el) => { 
             el.value = null;
             el.checked = false;
         })
@@ -130,7 +130,7 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
 
     if (sendForm) {
         data = new FormData($('#request-offer')[0]);
-        document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((el) => {
+        document.querySelectorAll('input:not(#contractor-phone, input[type="submit"]), textarea').forEach((el) => {
             el.value = null;
             el.checked = false;
         })
@@ -144,25 +144,25 @@ document.querySelector('.contractor-input').addEventListener('submit', (e) => {
     e.preventDefault()
 
     const conForm = document.querySelector('.contractor-input');
-    const email = document.querySelector('#contractor-email')
-    const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+    const phone = document.querySelector('#contractor-phone');
+    const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 
-    if (!email.value || !(emailRegex.test(email.value))) {
-        conForm.classList.add('error');
-        document.querySelector('.contractor-error-email').style.display = "block"
-        email.addEventListener('input', () => {
-            email.style.border = 'none'
-            conForm.classList.remove('error');
+    if (!phone.value || !(phoneRegex.test(phone.value))) {
+        document.querySelector('.error-validate').classList.add('error');
+        document.querySelector('.contractor-error-phone').style.display = "block"
+        phone.addEventListener('input', () => {
+            phone.style.border = 'none'
+            document.querySelector('.error-validate').classList.remove('error');
         })
-        email.addEventListener('input', () =>{
-            document.querySelector('.contractor-error-email').style.display = "none"
+        phone.addEventListener('input', () =>{
+            document.querySelector('.contractor-error-phone').style.display = "none"
         })
     } else {
         const data = {
-            email: email.value,
+            phone: phone.value,
         }
         document.querySelector('.contractor-error-email').style.display = "none"
-        email.parentElement.style.border = "none"
+        phone.parentElement.style.border = "none"
         document.querySelectorAll('.contractor-input input:not(input[type="submit"])').forEach((el) => { el.value = null })
         handleEmail(data)
     }
