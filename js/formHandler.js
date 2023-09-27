@@ -144,10 +144,10 @@ document.querySelector('.contractor-input').addEventListener('submit', (e) => {
     e.preventDefault()
 
     const conForm = document.querySelector('.contractor-input');
-    const phone = document.querySelector('#contractor-phone');
-    const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    const phone = document.querySelector('#contractor-email');
+    const emailRegex = /[a-zA-Z0-9]+[@]+[a-zA-Z0-9]+[.]+[a-zA-Z]+/;
 
-    if (!phone.value || !(phoneRegex.test(phone.value))) {
+    if (!phone.value || !(emailRegex.test(phone.value))) {
         document.querySelector('.error-validate').classList.add('error');
         document.querySelector('.contractor-error-phone').style.display = "block"
         phone.addEventListener('input', () => {
@@ -161,7 +161,7 @@ document.querySelector('.contractor-input').addEventListener('submit', (e) => {
         const data = {
             phone: phone.value,
         }
-        document.querySelector('.contractor-error-email').style.display = "none"
+        document.querySelector('.contractor-error-phone').style.display = "none"
         phone.parentElement.style.border = "none"
         document.querySelectorAll('.contractor-input input:not(input[type="submit"])').forEach((el) => { el.value = null })
         handleEmail(data)

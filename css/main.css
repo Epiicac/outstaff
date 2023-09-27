@@ -423,7 +423,10 @@ swiper-container {
   margin: 36px 0;
 }
 .contractor-input.error {
-  border: 2px solid rgb(255, 77, 87);
+  border: 2px solid rgb(255, 77, 87) !important;
+}
+#contactor-email.error {
+  border: 2px solid rgb(255, 77, 87) !important;
 }
 .contractor-input input {
   flex: 1 0 0;

@@ -252,6 +252,9 @@
     padding: 0px 36px;
   }
 
+  #contractor {
+    display: none;
+  }
   .contractor-form {
     padding: 24px 36px;
   }

@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelectorAll('.outsource-button').forEach((el) => {
   el.addEventListener('click', () => {
-    document.querySelectorAll('input:not(#contractor-phone, input[type="submit"]), textarea').forEach((item) => {
+    document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((item) => {
       item.value = '';
       item.checked = false;
       item.style.border = "none"
@@ -205,8 +205,8 @@ document.querySelectorAll('.outsource-button').forEach((el) => {
     if (document.querySelector('.contractor-input').classList.contains('error')) {
       document.querySelector('.contractor-input').classList.remove('error')
     }
-    if (document.getElementById('contractor-phone')) {
-      document.getElementById('contractor-phone').classList.remove('error');
+    if (document.getElementById('contractor-email')) {
+      document.getElementById('contractor-email').classList.remove('error');
     }
     document.querySelector('.contractor-input').nextElementSibling.style.display = "none"
     files = [];
@@ -214,7 +214,7 @@ document.querySelectorAll('.outsource-button').forEach((el) => {
   })
 })
 
-var input_cont = document.getElementById('contractor-phone');
+var input_cont = document.getElementById('contractor-email');
 var form_cont = document.querySelector('.contractor-input')
 window.addEventListener('resize', function(event) {
   if (document.documentElement.clientWidth < 768) {
