@@ -626,6 +626,13 @@
     background-size: contain;
   }
 
+  .outsource-list li {
+    order: 1;
+  }
+  .outsource-list li:nth-child(even) {
+    order: 2;
+  }
+
   .outsource-n, .outsource-l {
     padding: 24px;
   }
@@ -658,6 +665,7 @@
   .request-offer-inputs .left, .request-offer-inputs .right {
     width: 100%;
   }
+
 
   .left {
     width: 100%;
