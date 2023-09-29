@@ -129,8 +129,8 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
     }
 
     if (sendForm) {
-        data = new FormData($('#request-offer'));
-        document.querySelectorAll('input:not(#contractor-phone, input[type="submit"]), textarea').forEach((el) => {
+        data = new FormData($('#request-offer')[0]);
+        document.querySelectorAll('input:not(#contractor-email, input[type="submit"]), textarea').forEach((el) => {
             el.value = null;
             el.checked = false;
         })
@@ -175,6 +175,7 @@ function notDuplicate(fl, f) {
 }
 
 function handleEmail(data) {
+    console.log($('#request-offer'));
     document.querySelector('.sendmail-popup-wrapper').classList.toggle('hidden')
     data.append('link', location.href);
     $.ajax({
