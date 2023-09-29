@@ -129,7 +129,7 @@ document.querySelector('#request-offer').addEventListener('submit', (e) => {
     }
 
     if (sendForm) {
-        data = new FormData($('#request-offer')[0]);
+        data = new FormData($('#request-offer'));
         document.querySelectorAll('input:not(#contractor-phone, input[type="submit"]), textarea').forEach((el) => {
             el.value = null;
             el.checked = false;
@@ -159,7 +159,6 @@ document.querySelector('.contractor-input').addEventListener('submit', (e) => {
         })
     } else {
         data = new FormData($('.contractor-input')[0]);
-        console.log($('.contractor-input')[0]);
         document.querySelector('.contractor-error-phone').style.display = "none"
         email.parentElement.style.border = "none"
         document.querySelectorAll('.contractor-input input:not(input[type="submit"])').forEach((el) => { el.value = null })
