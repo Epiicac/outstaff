@@ -144,25 +144,24 @@ document.querySelector('.contractor-input').addEventListener('submit', (e) => {
     e.preventDefault()
 
     const conForm = document.querySelector('.contractor-input');
-    const phone = document.querySelector('#contractor-email');
+    const email = document.querySelector('#contractor-email');
     const emailRegex = /[a-zA-Z0-9]+[@]+[a-zA-Z0-9]+[.]+[a-zA-Z]+/;
 
-    if (!phone.value || !(emailRegex.test(phone.value))) {
+    if (!email.value || !(emailRegex.test(email.value))) {
         document.querySelector('.error-validate').classList.add('error');
         document.querySelector('.contractor-error-phone').style.display = "block"
-        phone.addEventListener('input', () => {
-            phone.style.border = 'none'
+        email.addEventListener('input', () => {
+            email.style.border = 'none'
             document.querySelector('.error-validate').classList.remove('error');
         })
-        phone.addEventListener('input', () =>{
+        email.addEventListener('input', () =>{
             document.querySelector('.contractor-error-phone').style.display = "none"
         })
     } else {
-        const data = {
-            phone: phone.value,
-        }
+        data = new FormData($('.contractor-input')[0]);
+        console.log($('.contractor-input')[0]);
         document.querySelector('.contractor-error-phone').style.display = "none"
-        phone.parentElement.style.border = "none"
+        email.parentElement.style.border = "none"
         document.querySelectorAll('.contractor-input input:not(input[type="submit"])').forEach((el) => { el.value = null })
         handleEmail(data)
     }
