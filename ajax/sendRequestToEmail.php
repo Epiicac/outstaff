@@ -1,6 +1,6 @@
 <?php
 
-    $sendTo = 'i.pashin@softmg.ru';
+    $sendTo = 'n.chesnov@softmg.ru';
 
     function getEmailRow($title, $value) {
         return '<b>' . $title . ': </b>' . $value;

@@ -523,7 +523,7 @@
 			</section>
 			<section id="form">
 				<h2>оформить заявку</h2>
-				<form action="#" class="leave-request" id="leave-request-form">
+				<form action="#" method="post" class="leave-request" id="leave-request-form">
 					<div class="toppings">
 						<input class="topi" type="checkbox" name="extra_backend" id="t1">
 						<label class="topping" for="t1">Backend</label>
@@ -543,7 +543,7 @@
 							<textarea name="description" id="request-description" rows="3" placeholder="Напишите кратко о проекте"></textarea>
 							<div class="form-error"><span>Некорректные данные</span></div>
 						</div>
-						<input type="file" name="additional-file" id="file" multiple>
+						<input type="file" name="additional-file[]" id="file" multiple>
 						<label class="add-file" for="file">
 							<div class="file-wrapper">
 							  <div class="file-icon">

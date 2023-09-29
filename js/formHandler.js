@@ -74,7 +74,8 @@ document.querySelector('#leave-request-form').addEventListener('submit', (e) => 
     
     if (formValid) {
         if (document.querySelector('.selected-files') !== null)
-            document.querySelector('.selected-files').innerHTML = '<span class="file-hint">Прикрепить файлы</span><span class="file-hint-desc">Загружаемые файлы не должны превышать 20 мб</span>'
+            document.querySelector('.file-desc').innerHTML = '<span class="file-hint">Прикрепить файлы</span><span class="file-hint-desc">Загружаемые файлы не должны превышать 20 мб</span>'
+            $('.selected-files').remove();
         data = new FormData($('#leave-request-form')[0]);
         handleEmail(data)
         
@@ -175,7 +176,6 @@ function notDuplicate(fl, f) {
 }
 
 function handleEmail(data) {
-    console.log($('#request-offer'));
     document.querySelector('.sendmail-popup-wrapper').classList.toggle('hidden')
     data.append('link', location.href);
     $.ajax({

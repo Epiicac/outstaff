@@ -38,13 +38,12 @@ if (isset($_POST['description'])) {
 $commentWithoutExtraServices = $comment;
 
 $extraFields = [
-    'extra_logo' => 'разработка логотипа',
-    'extra_calc' => 'калькулятор',
-    'extra_quiz' => 'квиз',
-    'extra_support' => 'поддержка сайта',
-    'extra_yandex_direct' => 'запуск рекламы Яндекс.Директ',
-    'extra_analytics' => 'настройка аналитики',
-    'extra_online_chat' => 'онлайн-чат'
+    'extra_backend' => 'Backend',
+    'extra_mobile' => 'Mobile',
+    'extra_frontend' => 'Frontend',
+    'extra_analyst' => 'Аналитики',
+    'extra_ux_ui' => 'UX/UI Design',
+    'extra_testers' => 'Тестировщики'
 ];
 $extraServicesComments = [];
 foreach ($extraFields as $extraFieldKey => $extraFieldValue) {
